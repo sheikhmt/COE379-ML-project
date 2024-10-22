@@ -123,7 +123,7 @@ def build_random_forest_model(combined_data):
 # Example Usage
 if __name__ == "__main__":
     api_key = "your_marketaux_api_key"  # Replace with your MarketAux API key
-#API key: OwqFK6zS6zvEkEjyrRRguEOkK0dbyJZn3vS2O9Vq
+    
     # Step 1: Get stock price data
     stock_data = get_stock_data()
 
