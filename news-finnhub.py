@@ -48,6 +48,13 @@ def get_sentiment_scores(summaries):
 # Get sentiment scores
 sentiment_scores = get_sentiment_scores(summaries)
 
+# Remove outliers from sentiment scores using Z-score
+sentiment_scores = np.array(sentiment_scores)
+z_scores = np.abs(stats.zscore(sentiment_scores))
+sentiment_scores = sentiment_scores[
+    z_scores < 2
+]  # Keep data within 2 standard deviations
+
 # Fetch Raytheon stock data using yfinance
 stock_df = yf.download("RTX", start="2024-10-01", end="2024-10-21", interval="1d")
 
@@ -57,7 +64,7 @@ stock_df.index = stock_df.index.tz_localize(None)
 # Create a DataFrame for sentiment analysis
 sentiment_df = pd.DataFrame(
     {
-        "Date": pd.date_range(start="2024-10-01", periods=len(summaries)),
+        "Date": pd.date_range(start="2024-10-01", periods=len(sentiment_scores)),
         "Sentiment": sentiment_scores,
     }
 )
@@ -67,36 +74,42 @@ sentiment_df.index = sentiment_df.index.tz_localize(None)
 # Filter sentiment_df to match stock_df date range and fill missing dates
 sentiment_df = sentiment_df.reindex(stock_df.index).interpolate()
 
-close_data = stock_df["Close"].values.reshape(-1)
-sentiment_data = sentiment_df["Sentiment"].values.reshape(-1)
+# Apply a rolling average to smooth the data
+window = 3  # Rolling window size (can be adjusted)
+stock_df["Close_Smoothed"] = stock_df["Close"].rolling(window=window).mean()
+sentiment_df["Sentiment_Smoothed"] = (
+    sentiment_df["Sentiment"].rolling(window=window).mean()
+)
 
-# Create the combined DataFrame
+# Align and create the combined DataFrame
 data = pd.DataFrame(
     {
-        "Close": close_data,
-        "Sentiment": sentiment_data,
+        "Close": stock_df["Close_Smoothed"],
+        "Sentiment": sentiment_df["Sentiment_Smoothed"],
     },
     index=stock_df.index,
-)
+).dropna()  # Drop NaN values due to rolling mean
 
 # Calculate correlations
 pearson_corr, p_value = stats.pearsonr(data["Close"], data["Sentiment"])
 
-# Create figure with two y-axes
+# Plotting
 fig, ax1 = plt.subplots(figsize=(12, 6))
 
 # Plot Close Price on primary y-axis
 color = "tab:blue"
 ax1.set_xlabel("Date")
 ax1.set_ylabel("Close Price (USD)", color=color)
-line1 = ax1.plot(data.index, data["Close"], color=color, label="Stock Price")
+line1 = ax1.plot(data.index, data["Close"], color=color, label="Stock Price (Smoothed)")
 ax1.tick_params(axis="y", labelcolor=color)
 
 # Create secondary y-axis for Sentiment
 ax2 = ax1.twinx()
 color = "tab:orange"
 ax2.set_ylabel("Sentiment Score", color=color)
-line2 = ax2.plot(data.index, data["Sentiment"], color=color, label="Sentiment")
+line2 = ax2.plot(
+    data.index, data["Sentiment"], color=color, label="Sentiment (Smoothed)"
+)
 ax2.tick_params(axis="y", labelcolor=color)
 
 # Combine legends
@@ -109,12 +122,11 @@ plt.xticks(rotation=45)
 
 # Add correlation information
 plt.title(
-    f"RTX Stock Price and Sentiment Over Time\nPearson Correlation: {pearson_corr:.3f} (p-value: {p_value:.3f})"
+    f"RTX Stock Price and Smoothed Sentiment Over Time\nPearson Correlation: {pearson_corr:.3f} (p-value: {p_value:.3f})"
 )
 
 # Adjust layout to prevent label cutoff
 plt.tight_layout()
-
 plt.show()
 
 # Print additional statistics
@@ -122,14 +134,11 @@ print("\nCorrelation Analysis:")
 print(f"Pearson correlation coefficient: {pearson_corr:.3f}")
 print(f"P-value: {p_value:.3f}")
 
-# Calculate additional statistics
-print("\nSummary Statistics:")
-print(data.describe())
-
 # Calculate daily changes
 data["Price_Change"] = data["Close"].pct_change()
 data["Sentiment_Change"] = data["Sentiment"].pct_change()
 
-print("\nDaily Changes Correlation:")
+# Calculate correlation for daily changes
 daily_corr = data["Price_Change"].corr(data["Sentiment_Change"])
+print("\nDaily Changes Correlation:")
 print(f"Correlation between daily changes: {daily_corr:.3f}")
