@@ -9,3 +9,5 @@ transformers
 scipy
 yfinance
 requests
+scikit-learn
+plotly
