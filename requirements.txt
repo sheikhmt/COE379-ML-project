@@ -1,3 +1,10 @@
 pandas
 tweepy
 selenium
+textblob
+finnhub-python
+matplotlib
+torch
+transformers
+scipy
+yfinance
