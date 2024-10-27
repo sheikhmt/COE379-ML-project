@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 import re
 from datetime import datetime
-from secret import EODHD_key
+from secret import EODHD_key  # Ensure this module exists and contains your API key
 
 # Define your EOD Historical Data API key
 api_key = EODHD_key  # Replace with your actual API key
@@ -19,51 +19,37 @@ today = datetime.utcnow().strftime("%Y-%m-%d")
 test_data = "2024-10-15"  # Example for test data
 
 # Construct the URL for Financial News Feed API
-url = f"https://eodhd.com/api/sentiments"
+url = "https://eodhistoricaldata.com/api/news"
 
-# Define parameters for the API call
-params = {
-    "s": ",".join(symbols.keys()),  # Convert the list of symbols to a comma-separated string
-    "api_token": api_key,
-    "from": test_data,  # Using test_data for this example
-    "to": today,
-    "limit": 100,  # Limit to 100 articles (you can change this limit)
-    "fmt":"json"
-}
-data = requests.get(url,params=params).json()
+# Function to make an API call for each symbol
+def fetch_news_data(symbol):
+    params = {
+        "s": symbol,
+        "api_token": api_key,
+        "from": test_data,  # Using test_data for this example
+        "to": today,
+        "limit": 100,  # Limit to 100 articles (you can change this limit)
+        "fmt": "json"
+    }
+    # Make the request
+    response = requests.get(url, params=params)
+    # Check if the request was successful
+    if response.status_code == 200:
+        return response.json()  # Return the JSON data
+    else:
+        print(f"Error fetching data for {symbol}: {response.status_code} - {response.text}")
+        return None
 
-print(data)
-# # Define parameters for the API call for news, can only call one at a time
-# params_RTX = {
-#     "s": "RTX.US",  # Convert the list of symbols to a comma-separated string
-#     "api_token": api_key,
-#     "from": test_data,  # Using test_data for this example
-#     "to": today,
-#     "limit": 100,  # Limit to 100 articles (you can change this limit)
-#     "fmt":"json"
-# }
-# params_HON = {
-#     "s": "HON.US",  # Convert the list of symbols to a comma-separated string
-#     "api_token": api_key,
-#     "from": test_data,  # Using test_data for this example
-#     "to": today,
-#     "limit": 100,  # Limit to 100 articles (you can change this limit)
-#     "fmt":"json"
-# }
-# params_LMT = {
-#     "s": "LMT.US",  # Convert the list of symbols to a comma-separated string
-#     "api_token": api_key,
-#     "from": test_data,  # Using test_data for this example
-#     "to": today,
-#     "limit": 100,  # Limit to 100 articles (you can change this limit)
-#     "fmt":"json"
-# }
-# dataRTX = requests.get(url,params_RTX=params_RTX).json()
-# print(dataRTX)
-# dataHON = requests.get(url,params_HON=params_HON).json()
-# print(dataHON)
-# dataLMT = requests.get(url,params_LMT=params_LMT).json()
-# print(dataLMT)
+# Fetch data for each symbol
+dataRTX = fetch_news_data("RTX.US")
+dataHON = fetch_news_data("HON.US")
+dataLMT = fetch_news_data("LMT.US")
+
+# Print the fetched data
+print("Raytheon (RTX) News Data:", dataRTX)
+print("Honeywell (HON) News Data:", dataHON)
+print("Lockheed Martin (LMT) News Data:", dataLMT)
+
 
 # import requests
 
