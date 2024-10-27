@@ -20,6 +20,11 @@ test_data = "2024-10-15"
 
 # Construct the URL
 url = f"https://api.marketaux.com/v1/news/all"
+url = f"https://eodhd.com/api/news"
+
+params={
+    "s":"RTX.US,"
+}
 
 # Define parameters for the API call
 params = {
