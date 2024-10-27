@@ -4,9 +4,8 @@ import yfinance as yf
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import finnhub
-from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import root_mean_squared_error
+from sklearn.metrics import mean_squared_error
 import plotly.graph_objects as go
 from scipy import stats
 from secret import FINHUB_KEY
@@ -61,7 +60,10 @@ def get_sentiment_scores(start_date, end_date, company="RTX"):
 
 # Fetch stock data and preprocess
 def fetch_stock_data(ticker, start_date, end_date):
-    stock_df = yf.download(ticker, start=start_date, end=end_date, interval="1d")
+    ticker_data = yf.Ticker(ticker)
+    stock_df = ticker_data.history(start=start_date, end=end_date)
+    print(stock_df)
+    # stock_df = yf.download(ticker, start=start_date, end=end_date, interval="1d")
     stock_df.index = stock_df.index.tz_localize(None)
     return stock_df
 
@@ -88,22 +90,21 @@ def prepare_features(stock_df, sentiment_df, window=3):
     return data.dropna()
 
 
-# Train model and make predictions
+# Train model and make predictions, including 10/25 forecast
 def train_and_predict(data):
-    X = data[["Sentiment", "Sentiment_Change", "Close"]].iloc[:-1]
-    y = data["Close"].shift(-1).iloc[:-1]  # Next day’s price as target
+    X = data[["Sentiment", "Sentiment_Change", "Close"]]
+    y = data["Close"].shift(-1)  # Next day’s price as target
 
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, shuffle=False
-    )
+    # Use all data until 10/24 for training
+    X_train, y_train = X.iloc[:-1], y.iloc[:-1]
     model = LinearRegression()
     model.fit(X_train, y_train)
-    y_pred = model.predict(X_test)
 
-    mse = root_mean_squared_error(y_test, y_pred)
-    print(f"Mean Squared Error: {mse}")
+    # Predict 10/25 price
+    y_pred = model.predict(X.iloc[[-1]])
+    print(f"Predicted price for 10/25: {y_pred[0]}")
 
-    return y_test, y_pred
+    return y.iloc[-1:], y_pred  # Return last actual and predicted values
 
 
 # Plotting the results with Plotly
@@ -113,22 +114,22 @@ def plot_results(data, y_test, y_pred):
     # Actual prices
     fig.add_trace(
         go.Scatter(
-            x=data.index[-len(y_test) :],
-            y=y_test,
+            x=data.index[:-1],
+            y=data["Close"][:-1],
             mode="lines",
             name="Actual Price",
             line=dict(color="blue"),
         )
     )
 
-    # Predicted prices
+    # Predicted price for 10/25
     fig.add_trace(
         go.Scatter(
-            x=data.index[-len(y_test) :],
+            x=[data.index[-1] + pd.Timedelta(days=1)],
             y=y_pred,
-            mode="lines",
-            name="Predicted Price",
-            line=dict(color="orange", dash="dash"),
+            mode="markers",
+            name="Predicted Price (10/25)",
+            marker=dict(color="orange", size=10),
         )
     )
 
@@ -145,12 +146,23 @@ def plot_results(data, y_test, y_pred):
 
 # Main function
 def main():
-    start_date, end_date = "2024-10-01", "2024-10-21"
+    start_date, end_date = "2024-10-01", "2024-10-26"
     sentiment_df = get_sentiment_scores(start_date, end_date)
     stock_df = fetch_stock_data("RTX", start_date, end_date)
 
     data = prepare_features(stock_df, sentiment_df)
     y_test, y_pred = train_and_predict(data)
+
+    # Check and print actual close price for 10/25 if available
+    actual_close_10_25 = (
+        stock_df.loc["2024-10-25"]["Close"] if "2024-10-25" in stock_df.index else None
+    )
+    print(f"Actual price for 10/25: {actual_close_10_25}")
+
+    if actual_close_10_25:
+        error = abs(y_pred[0] - actual_close_10_25)
+        print(f"Prediction error for 10/25: {error}")
+
     plot_results(data, y_test, y_pred)
 
 
