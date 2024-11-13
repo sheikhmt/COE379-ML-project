@@ -1,0 +1,18 @@
+[
+    {
+        "date": "2024-08-08T20:05:29+00:00",
+        "title": "Boeing\u2019s new CEO moves to factory heartland to stem safety crisis",
+        "content": "Boeing\u2019s new CEO Kelly Ortberg said on Thursday he would be based in the planemaker\u2019s birthplace Seattle, moving closer to the factory floor to rein in a safety crisis.",
+        "link": "https://www.reuters.com/business/aerospace-defense/new-boeing-ceo-seeks-restore-trust-stay-close-production-2024-08-08/",
+        "symbols": [
+            "RTX.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": -0.318,
+            "neg": 0.125,
+            "neu": 0.79,
+            "pos": 0.085
+        }
+    }
+]

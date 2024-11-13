@@ -1,0 +1,26 @@
+[
+    {
+        "date": "2024-08-05T15:58:15+00:00",
+        "title": "Lockheed Martin's Sales Outlook Has Improved Investor Sentiment, RBC Says",
+        "content": "Lockheed Martin's Sales Outlook Has Improved Investor Sentiment, RBC Says",
+        "link": "https://finance.yahoo.com/news/lockheed-martin-apos-sales-outlook-155815449.html",
+        "symbols": [
+            "0R3E.LSE",
+            "LMT.MX",
+            "LMT.US",
+            "LMTB34.SA",
+            "LOM.DU",
+            "LOM.F",
+            "LOM.MU",
+            "LOM.STU",
+            "LOM.XETRA"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.477,
+            "neg": 0,
+            "neu": 0.744,
+            "pos": 0.256
+        }
+    }
+]

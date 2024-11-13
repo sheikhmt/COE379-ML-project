@@ -1,0 +1,25 @@
+[
+    {
+        "date": "2024-10-22T14:36:00+00:00",
+        "title": "Lockheed Martin Earnings Were Rock Solid. The Stock Is Slumping.",
+        "content": "Lockheed Martin reports third-quarter earnings per share of $6.80. Wall Street was looking for about $6.50.\n\nContinue reading\n\nView comments",
+        "link": "https://finance.yahoo.com/m/358566e0-4c92-3286-8dae-d0dfb15b27dd/lockheed-martin-earnings-were.html",
+        "symbols": [
+            "0R3E.LSE",
+            "LMT.US",
+            "LMTB34.SA",
+            "LOM.DU",
+            "LOM.F",
+            "LOM.MU",
+            "LOM.STU",
+            "LOM.XETRA"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.296,
+            "neg": 0,
+            "neu": 0.896,
+            "pos": 0.104
+        }
+    }
+]

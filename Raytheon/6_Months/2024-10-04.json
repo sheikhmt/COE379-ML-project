@@ -1,0 +1,21 @@
+[
+    {
+        "date": "2024-10-04T14:26:31+00:00",
+        "title": "Raytheon to Make Super Semiconductors for DARPA",
+        "content": "Raytheon, an RTX subsidiary, this week announced a three-year, two-phase contract from DARPA to develop foundational ultra-wide bandgap semiconductors (UWBGS) based on diamond and aluminum nitride technology. These semiconductors could revolutionize semiconductor electronics, increasing power delivery and thermal management in sensors and other applications.\n\nDuring phase one of the contract, the Raytheon Advanced Technology team will develop diamond and aluminum nitride semiconductor films and integrate them into electronic devices. Phase two will optimize and mature the diamond and aluminum nitride technology onto larger-diameter wafers for sensor applications.\n\nAccording to the company, Raytheon has previous experience developing similar materials for Department of Defense systems, like Gallium Arsenide and Gallium Nitride.\n\nMost Read on IEN:\n\nRolls-Royce Spends Year Developing Rainbow Paint for Single Client Disgraced Ex-Nissan CEO Ordered to Return Luxury Yacht 144-Year-Old Dairy Products Maker Forced to Close Toilet Paper Panic Buying Returns\n\nThe unique material properties of UWBGS offer several advantages over traditional semiconductor technologies, enabling highly compact, ultra-high power radio frequency switches, limiters, and power amplifiers. Their high thermal conductivity also allows the ability to operate at higher temperatures and in more extreme environments.\n\nThe team's goal is to spearhead the development of these materials towards devices that are well suited for both existing and future radar and communication systems with extended capability and range, including cooperative sensing, electronic warfare, directed energy, and circuitry in high-speed weapon systems such as hypersonics.\n\nWork on this contract will take place at Raytheon's foundry in Andover, Massachusetts.\n\nAccording to a recent report from the Congressional Research Service, a public policy research institute, the U.S. has actively pursued the development of hypersonic weapons\u2014anything that travels Mach 5 or faster\u2014since the early 2000s.\n\nKeeping pace with weapons are countermeasures for hypersonic threats. Last week, the U.S. Missile Defense Agency picked Northrop Grumman to develop a first-of-its-kind defensive countermeasure against hypersonic missile threats.\n\nClick here to subscribe to our daily newsletter featuring breaking manufacturing industry news.\n\nView comments",
+        "link": "https://finance.yahoo.com/news/raytheon-super-semiconductors-darpa-142631286.html",
+        "symbols": [
+            "5UR.F",
+            "5UR.XETRA",
+            "RTX.US",
+            "RYTT34.SA"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.71,
+            "neg": 0.063,
+            "neu": 0.842,
+            "pos": 0.094
+        }
+    }
+]

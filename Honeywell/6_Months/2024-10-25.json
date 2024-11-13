@@ -1,0 +1,29 @@
+[
+    {
+        "date": "2024-10-25T12:44:00+00:00",
+        "title": "Honeywell Stock Falls on Downgrade. It\u2019s About the Economy.",
+        "content": "Baird analyst Peter Arment cut his rating on the company to Hold from Buy. His price target went to $217 a share from $223.\n\nContinue reading\n\nView comments",
+        "link": "https://finance.yahoo.com/m/56626fde-9b30-39e9-9dcb-e7d272b8c3d9/honeywell-stock-falls-on.html",
+        "symbols": [
+            "ALD.BE",
+            "ALD.DU",
+            "ALD.F",
+            "ALD.HA",
+            "ALD.HM",
+            "ALD.MU",
+            "ALD.STU",
+            "ALD.XETRA",
+            "HON.MX",
+            "HON.NEO",
+            "HON.US",
+            "HONB34.SA"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.026,
+            "neg": 0.072,
+            "neu": 0.853,
+            "pos": 0.075
+        }
+    }
+]

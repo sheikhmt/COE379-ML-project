@@ -1,0 +1,18 @@
+[
+    {
+        "date": "2024-08-25T23:13:06+00:00",
+        "title": "Coco Gauff searching for top form as she opens U.S. Open title defense",
+        "content": "Coco Gauff isn't exactly in prime form as she prepares to becomes the first woman to win consecutive U.S. Open titles since Serena Williams won three straight from 2012-14.",
+        "link": "https://www.reuters.com/sports/tennis/coco-gauff-searching-top-form-she-opens-us-open-title-defense-2024-08-25/",
+        "symbols": [
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.856,
+            "neg": 0,
+            "neu": 0.734,
+            "pos": 0.266
+        }
+    }
+]

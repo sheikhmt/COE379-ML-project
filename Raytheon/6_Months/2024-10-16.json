@@ -1,0 +1,37 @@
+[
+    {
+        "date": "2024-10-16T17:23:33+00:00",
+        "title": "Defense contractor Raytheon agrees to pay $950 million to resolve bribery, fraud allegations",
+        "content": "NEW YORK (AP) \u2014 RTX Corporation, the defense contractor formerly known as Raytheon, has agreed to pay the U.S. government $252 million to resolve criminal charges alleging it paid bribes to secure contracts with Qatar, federal prosecutors said Wednesday.\n\nThe company entered into a deferred prosecution agreement on charges of violating the anti-bribery provision of the Foreign Corruption Practices Act and the Arms Export Control Act. The company also has agreed to forfeit $36.6 million.\n\nAt a brief hearing in federal court in Brooklyn, lawyers for RTX waived their right to an indictment and pleaded not guilty to both counts. They did not object to any of the allegations in court documents filed in conjunction with the agreement.\n\nUnder the agreement, the company will have to demonstrate good conduct for the next 3\u00bd years and foster a culture of ethics and compliance with anti-corruption laws.\n\nAccording to court documents, Raytheon employees and agents offered and paid bribes to a foreign official between 2012 and 2016 to gain an advantage in obtaining lucrative business deals with the Qatar Emiri Air Force and Qatar Armed Forces.\n\nThe company then succeeded in securing four additions to an existing contract with the Gulf Cooperation Council \u2014 a regional union of Bahrain, Kuwait, Oman, Qatar, Saudi Arabia and the United Arab Emirates \u2014 and a $510 million sole-sourced contract to build a joint- operations center for the Qatari military, the court documents said.\n\nRaytheon made about $36.7 million in profit from the Gulf Cooperation Council contract additions and anticipated making more than $72 million on the joint operations center, but the Qatari government ultimately did not go forward with the deal, prosecutors said.\n\nView comments",
+        "link": "https://finance.yahoo.com/news/defense-contractor-raytheon-agrees-pay-172333229.html",
+        "symbols": [
+            "5UR.F",
+            "5UR.XETRA",
+            "RTX.US",
+            "RYTT34.SA"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.891,
+            "neg": 0.037,
+            "neu": 0.865,
+            "pos": 0.098
+        }
+    },
+    {
+        "date": "2024-10-16T15:51:26+00:00",
+        "title": "RTX to pay over $280 million to resolve US foreign bribery probe",
+        "content": "An RTX unit on Wednesday agreed to pay more than $280 million to resolve criminal charges brought by the U.S. Department of Justice stemming from a long-running foreign bribery probe.",
+        "link": "https://www.reuters.com/world/us/rtx-agrees-resolve-us-foreign-bribery-investigation-2024-10-16/",
+        "symbols": [
+            "RTX.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.296,
+            "neg": 0.182,
+            "neu": 0.605,
+            "pos": 0.213
+        }
+    }
+]

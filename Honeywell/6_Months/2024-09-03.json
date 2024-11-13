@@ -1,0 +1,64 @@
+[
+    {
+        "date": "2024-09-03T17:43:43+00:00",
+        "title": "Honeywell\u2019s CEO reveals how AI will give his\u00a0company a competitive edge\u2014and what won\u2019t",
+        "content": "Hello and welcome to Eye on AI. In this edition...Honeywell's AI strategy, OpenAI rethinks its nonprofit structure as Apple and Nvidia consider investing, a new way to build neural networks, and dating apps develop AI \"wingmen.\"\n\nLast week, I sat down with Honeywell CEO Vimal Kapur in London to discuss his company\u2019s approach to AI. Coincidentally, my colleague John Kell recently interviewed another senior Honeywell exec\u2014CIO Sheila Jordan\u2014about the company\u2019s approach to generative AI for Fortune\u2019s CIO Intelligence newsletter. (You can read John\u2019s story here.)\n\nBut while Jordan was keen to tell John about how Honeywell\u2019s own workforce has been experimenting with AI to find productivity gains, Kapur told me he did not think these internal uses of generative AI would confer any great competitive advantage to the firm. That\u2019s despite the fact Honeywell is using generative AI in many ways, from helping teams brainstorm and develop new products to helping with product testing, software coding, technical support, and sales. He said these efforts were vital and necessary\u2014but would soon be imitated by competitors, meaning they were unlikely to provide a lasting edge.\n\nInternal use of AI tools becoming table stakes\n\n\u201cI won't say it is a substantial disruptor, but it's a nice opportunity for us to drive productivity,\u201d he said about these internal uses of AI. Honeywell has put a variety of AI tools and copilots to work internally from vendors such as Microsoft and Salesforce, he said. But the use of this kind of AI is increasingly just table stakes. It may let Honeywell grow without having to hire as many people, he said, but it would not alter the strategic landscape in the segments in which Honeywell competes: aviation, industrial automation, building automation, and energy transition.\n\nInstead, the real strategic benefits of AI will come from integrating AI into Honeywell\u2019s offerings to its customers, Kapur said. In many of the industrial and aviation sectors that Honeywell serves, the issue is not that AI is poised to take jobs. Instead, these industries are facing severe labor shortages. There are not enough skilled blue-collar workers\u2014mechanics, electricians, plumbers, construction workers, logistics experts, and machine operators\u2014to fill vacant roles. Kapur says this is particularly true for what is called \u201ctouch labor\u201d\u2014in which a human is needed to operate equipment or to maintain it. There\u2019s a shortage of skilled workers almost everywhere worldwide.\n\nIndustrial copilots\n\nKapur thinks Honeywell has the right data to train a stable of AI copilots specifically for these roles that its customers could then use to upskill workers to fill in-demand jobs. \u201cIf historically somebody said, \u2018This job requires 12 years or 15 years experience,\u2019 well, maybe you're going to be able to have someone do it with seven years experience, and a supplementer of that is done by copilots, which are part of our products,\u201d he said.\n\nHe's certain that companies in the industries Honeywell serves will rapidly adopt these copilots because there is currently no real alternative. \u201cWhat\u2019s a Plan B? There is no Plan B,\u201d he said. \u201cThere\u2019s no humans to replace the humans who have left the workforce.\u201d\n\nNew AI product features\n\nThe next area where Kapur thinks Honeywell may be able to jump ahead of competitors is integrating AI directly into products. He gives examples of supermarket checkout scanners, of which Honeywell is a major producer. Today, these scanners work well for bar-coded products. But if you get to the counter with an individual piece of fruit or vegetables where the bar-coded sticker hasn\u2019t been applied or has fallen off, then the cashier must manually look up the price, or the customer is forced to go and weigh the product individually on a separate digital scale, often holding up the line. Kapur says that integrating cameras and computer vision directly into Honeywell\u2019s checkout scanners would enable the scanner to recognize the item and charge the customer appropriately, without delaying the process.\n\nKapur says Honeywell is working with chip manufacturers, such as Qualcomm, to ensure its scanners are equipped with chips that can efficiently run AI models directly on the device. And he said Honeywell has many ideas for products that might integrate AI in this way, although most won\u2019t hit the market until late 2025 or 2026 due to the 12 to 18 month development and certification process required.\n\nAI for writing engineering specs\n\nThe third area where Kapur sees Honeywell using AI to gain an edge is in providing engineering solutions to customers. In many cases, Honeywell doesn\u2019t just sell an off-the-shelf product. It sells a system incorporating several of its products. These are usually built to a customer\u2019s specifications, a task that requires a significant amount of time from the 5,000 engineers Honeywell employs for this work. \u201cWe write the solution or spec for the project every time and we do tens of thousands of projects in our business every year,\u201d he says.\n\nKapur says Honeywell wants to build a large language model that can streamline this spec writing process, so that what currently takes as long as a month could be completed in just minutes\u2014with engineers checking the output for perhaps a few additional days to guard against the risk of AI \u201challucinations.\u201d The time savings would be hugely attractive to a construction firm trying to complete a major project such as building a hotel or a hospital on time.\n\nThis idea of searching for AI applications that can transform a company\u2019s offering to its customers, and not just as a way to create internal efficiencies and save costs, is one that is likely to characterize the next wave of AI adoption.\n\nHere\u2019s more AI news.\n\nJeremy Kahn\r\njeremy.kahn@fortune.com\r\n@jeremyakahn\n\nCorrection, Sept. 3: Due to an editing error, an earlier version of this story misspelled Honeywell CEO Vimal Kapur's last name in several instances. The story has also been updated to clarify Kapur's position on the company's internal use of generative AI.\n\nBefore we get to the news. If you want to learn more about AI and its likely impacts on our companies, our jobs, our society, and even our own personal lives, please consider picking up a copy of my book, Mastering AI: A Survival Guide to Our Superpowered Future. It's out now in the U.S. from Simon & Schuster and you can order a copy today here. In the U.K. and Commonwealth countries, you can buy the British edition from Bedford Square Publishers here.\n\nThis story was originally featured on Fortune.com\n\nView comments",
+        "link": "https://finance.yahoo.com/news/honeywell-ceo-reveals-ai-company-174343403.html",
+        "symbols": [
+            "ALD.BE",
+            "ALD.DU",
+            "ALD.F",
+            "ALD.HA",
+            "ALD.HM",
+            "ALD.MU",
+            "ALD.STU",
+            "ALD.XETRA",
+            "HON.MX",
+            "HON.NEO",
+            "HON.US",
+            "HONB34.SA"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.995,
+            "neg": 0.026,
+            "neu": 0.89,
+            "pos": 0.084
+        }
+    },
+    {
+        "date": "2024-09-03T14:32:00+00:00",
+        "title": "Honeywell, Cisco Unite to Reduce Energy Usage in Buildings",
+        "content": "Honeywell International Inc. HON recently partnered with Cisco Systems, Inc. CSCO to develop an AI-powered solution that automatically adjusts building systems based on various usage levels. This collaboration aims to minimize energy consumption and enhance the productivity and comfort of workers.\r\n\r\nBased in San Jose, CA, Cisco is an IP-based networking company offering products and services to service providers, companies, commercial users and individuals. The company is rapidly expanding its presence in the network security domain. \r\n\r\nCisco Spaces is a workspace management solution of Cisco that gathers occupancy and environmental data using the company\u2019s network infrastructure, environmental sensors, collaboration devices and third-party IoT devices. This solution doesn\u2019t require any other hardware. Honeywell Forge Sustainability+ will then use this information to boost energy optimization and offer clarity into how these buildings are used. When integrated with Honeywell's Optimizer Advanced Controller for Buildings, the real-time occupancy data will further boost energy efficiency, making the building more robust.\r\n\r\nWith this solution, room temperatures, lighting and ventilation will be adjusted automatically based on people\u2019s locations and user settings. This automation will simplify building operations, optimize energy use, improve employee comfort and monitor greenhouse gas emissions. It can manage a single building or an entire campus.\r\n\r\nThis partnership is in line with HON's goal to reduce the environmental footprint of buildings. It also supports the company's focus on three major trends, which are automation, energy transition and sustainability.\n\nHON\u2019s Zacks Rank\n\nStrength in the commercial aviation and building automation businesses augurs well for Honeywell. The Aerospace segment is particularly strong, driven by robust demand in the aviation aftermarket.\r\n\r\nIn the past year, this Zacks Rank #3 (Hold) company\u2019s shares has risen 10.4% against the industry\u2019s 1.1% decline. Zacks Investment Research\n\nImage Source: Zacks Investment Research\n\nHowever, weakness in the Industrial Automation segment due to lower demand for projects is worrisome. The weakened demand for personal protective equipment within the sensing and safety technologies business is also concerning.\n\nStocks to Consider\n\nBetter-ranked companies are discussed below.\r\n\r\nVector Group Ltd. VGR currently carries a Zacks Rank #2 (Buy). You can see the complete list of today\u2019s Zacks #1 Rank (Strong Buy) stocks here.\r\n\r\nVGR delivered a trailing four-quarter average earnings surprise of 15.4%. In the past 60 days, the Zacks Consensus Estimate for Vector Group\u2019s 2024 earnings has increased 5.2%.\r\n\r\nFederal Signal Corporation FSS presently carries a Zacks Rank of 2. The company delivered a trailing four-quarter average earnings surprise of 12.3%.\r\n\r\nIn the past 60 days, the Zacks Consensus Estimate for FSS\u2019 2024 earnings has increased 5.2%.\n\nStory continues\n\nWant the latest recommendations from Zacks Investment Research? Today, you can download 7 Best Stocks for the Next 30 Days. Click to get this free report\n\nHoneywell International Inc. (HON) : Free Stock Analysis Report\n\nCisco Systems, Inc. (CSCO) : Free Stock Analysis Report\n\nFederal Signal Corporation (FSS) : Free Stock Analysis Report\n\nVector Group Ltd. (VGR) : Free Stock Analysis Report\n\nTo read this article on Zacks.com click here.\n\nZacks Investment Research\n\nView comments",
+        "link": "https://finance.yahoo.com/news/honeywell-cisco-unite-reduce-energy-143200530.html",
+        "symbols": [
+            "ALD.BE",
+            "ALD.DU",
+            "ALD.F",
+            "ALD.HA",
+            "ALD.HM",
+            "ALD.MU",
+            "ALD.STU",
+            "ALD.XETRA",
+            "CIS.BE",
+            "CIS.DU",
+            "CIS.F",
+            "CIS.HM",
+            "CIS.STU",
+            "CIS.XETRA",
+            "CSCO.MX",
+            "CSCO.NEO",
+            "CSCO.US",
+            "CSCO34.SA",
+            "FSG.F",
+            "FSS.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.997,
+            "neg": 0.026,
+            "neu": 0.798,
+            "pos": 0.175
+        }
+    }
+]

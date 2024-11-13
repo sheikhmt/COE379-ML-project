@@ -1,0 +1,28 @@
+[
+    {
+        "date": "2024-10-24T12:52:00+00:00",
+        "title": "Honeywell Earnings Beat Estimates. Why the Stock Is Down.",
+        "content": "Honeywell reports third-quarter adjusted earnings of $2.58 a share, better than Wall Street estimates of $2.51.\n\nContinue reading\n\nView comments",
+        "link": "https://finance.yahoo.com/m/2cd9f829-ae87-374d-9af9-a95eefdcea11/honeywell-earnings-beat.html",
+        "symbols": [
+            "ALD.BE",
+            "ALD.DU",
+            "ALD.F",
+            "ALD.HA",
+            "ALD.HM",
+            "ALD.MU",
+            "ALD.STU",
+            "ALD.XETRA",
+            "HON.MX",
+            "HON.NEO",
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.625,
+            "neg": 0,
+            "neu": 0.769,
+            "pos": 0.231
+        }
+    }
+]

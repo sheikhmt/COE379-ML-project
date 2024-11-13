@@ -1,0 +1,18 @@
+[
+    {
+        "date": "2024-05-05T08:10:50+00:00",
+        "title": "Foxconn reiterates Q2 revenue to grow, posts record April sales",
+        "content": "Taiwan's Foxconn, the world's largest contract electronics maker and the biggest assembler of Apple's iPhone, reiterated on Sunday it expected a rise in second-quarter revenue, and reported record sales for the month of April.\nFoxconn said in a statement that this year's second quarter \"remains a traditional off-peak season, and major products are entering a period of transition between old and ne",
+        "link": "https://www.reuters.com/technology/foxconn-reiterates-q2-revenue-grow-posts-record-april-sales-2024-05-05/",
+        "symbols": [
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0,
+            "neg": 0,
+            "neu": 1,
+            "pos": 0
+        }
+    }
+]

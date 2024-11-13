@@ -1,0 +1,53 @@
+[
+    {
+        "date": "2024-06-13T11:05:42+00:00",
+        "title": "After several near-misses on airport runways, a tech company revives work on a hazard-warning system",
+        "content": "DALLAS (AP) \u2014 As a Delta Air Lines jet began roaring down a runway, an air traffic controller at New York's John F. Kennedy International Airport suddenly blurted out an expletive, then ordered the pilots to stop their takeoff roll.\n\nThe controller saw an American Airlines plane mistakenly crossing the same runway, into the path of the accelerating Delta jet. JFK is one of only 35 U.S. airports with the equipment to track planes and vehicles on the ground. The system alerted the airport control tower to the danger, possibly saving lives last year.\n\nThe National Transportation Safety Board and many independent experts say pilots should get warnings without waiting precious seconds to get word from controllers. Just last week, the NTSB recommended that the Federal Aviation Administration collaborate with manufacturers to develop technology for alerting pilots directly.\n\nHoneywell International, a conglomerate with a big aerospace business, has been working on such an early-warning system for about 15 years and thinks it is close to a finished product. The company gave a demonstration during a test flight last week. As pilot Joe Duval aimed a Boeing 757 for a runway in Tyler, Texas, a warning appeared on his display and sounded in the cockpit: \u201cTraffic on runway!\u201d\n\nThe system had detected a business jet that was just appearing as a speck on the runway about a mile away \u2014 ground the Boeing would cover in a matter of seconds.\n\nDuval tilted the plane's nose up and pushed the throttle forward into a G-force-inducing climb, safely away from the Dassault Falcon 900 below.\n\nHoneywell officials claim their technology would have alerted the Delta pilots who had the January 2023 near-miss at JFK 13 seconds before the air traffic controller screamed the expletive and told them to stop their takeoff. Merely removing the need for a controller to relay the warning from ground-based systems could be critical.\n\n\u201cThose are microseconds, but they are enough to make a difference,\u201d Michael McCormick, a former FAA official who now teaches air-traffic management at Embry-Riddle Aeronautical University in Florida, said. \u201cProviding alerts directly to the cockpit is the next step. This puts the tool in the hands of the pilot who actually has control of the aircraft. This technology is a game-changer.\"\n\nHoneywell plans to layer the cockpit-alert system on top of technology that is already in wide use and warns pilots if they fly too low.\n\nIncidents like the one at JFK are called runway incursions \u2014 a plane or ground vehicle is on a runway when it shouldn\u2019t be. Some incursions are caused by pilots entering a runway without clearance from air traffic controllers. In other cases, there isn't enough spacing between planes that are landing or taking off, which can be the fault of pilots or controllers.\n\nStory continues\n\nThe number of incursions fell during the coronavirus pandemic and has not returned to the recent peaks of more than 2,000 incidents recorded in both 2016 and 2017. However, the most serious ones \u2014 where a collision was narrowly avoided or there was a \u201csignificant potential\u201d for a crash \u2014 have been rising since 2017. There were 23 in the United States last year, up from 16 in 2022, according to FAA statistics.\n\nReducing incursions has always been a priority for FAA \u201cbecause that\u2019s where the greatest risk lies in the aviation system,\u201d said McCormick, the former FAA official.\n\nThe worst accident in aviation history occurred in 1977 on the Spanish island of Tenerife, when a KLM 747 began its takeoff roll while a Pan Am 747 was still on the runway; 583 people died when the planes collided in thick fog.\n\nEarlier this year, a Japan Airlines jet landing in Tokyo collided with a Japanese coast guard plane that was preparing to take off. Five crew members on the coast guard plane died, but all 379 people on board the airliner escaped before it was destroyed by fire.\n\nThe FAA has paid for airport improvements designed to reduce incursions, such as reconfiguring confusing taxiways. It has also paid for technology to alert people in the control tower when a plane is lined up to land on a taxiway instead of a runway.\n\nThat type of landing error nearly happened in 2017 in San Francisco, when an Air Canada jet pulled up at the last second to avoid crashing into four jets on the taxiway that were carrying about 1,000 passengers between them.\n\nThe FAA is also rolling out more simulators for controllers to practice directing traffic during times of low visibility. The NTSB last week recommended that the FAA require annual refresher training. The suggestion came after the NTSB determined that a controller who nearly caused a catastrophic crash between a FedEx plane and a Southwest Airlines jet during heavy fog in Austin, Texas, last year had not trained for low-visibility conditions in at least two years.\n\nThe NTSB's examination of the February 2023 close call in Austin also renewed attention on technology to provide cockpit warnings of possible incursions and included a brief reference to the system Honeywell is developing. The FAA has not certified the system, which Honeywell calls \u201cSurf-A\u201d for surface alerts, but the company thinks certification could happen in the next 18 months.\n\nThe FAA\u2019s best technology against runway incursions is a system called ASDE-X that lets controllers track planes and vehicles on the ground. But it is expensive, so it\u2019s only at 35 of the 520 U.S. airports with a control tower.\n\n\u201cSome people thought ASDE-X was the solution,\u201d former NTSB Chairman Robert Sumwalt said. \u201cThe problem is, there are a lot more than 35 air-carrier airports. A product (that warns pilots in the cockpit) goes to every airport that the airplane goes to.\u201d\n\nHoneywell, which is based in Charlotte, North Carolina, began working on a cockpit warning system around 2008 and tried to convince airlines to support the idea, but it says it found no takers. The company suspended the project when the pandemic devastated aviation in 2020.\n\nThen, as air travel recovered early last year, there were a series of high-profile close calls between planes at major U.S. airports, including the ones at JFK and Austin\u2013Bergstrom International Airport.\n\n\u201cTraffic was picking up. You were having more of the near-misses,\" said Thea Feyereisen, part of the Honeywell team working on the system. The timing was right to revive the warning system.\n\n\u201cPreviously, when we would talk to airlines, they were not interested. Last year, we go talk to the airlines again, and now they\u2019re interested,\" she said.\n\nStill, Honeywell doesn\u2019t have a launch customer, and company officials won\u2019t say how much it would cost to outfit a plane.\n\nFeyereisen was asked if the system would have prevented the close calls in New York and Austin.\n\n\u201cWhat our lawyers tell us to say (is) we reduce the risk of a runway incursion. We provide the pilot more time to make a decision\u201d whether to, for example, call off a landing and fly around the airport instead, she said. \u201cStill, the pilot needs to make a decision.\u201d\n\nView comments",
+        "link": "https://finance.yahoo.com/news/several-near-misses-airport-runways-110542217.html",
+        "symbols": [
+            "0QZ4.LSE",
+            "ALD.BE",
+            "ALD.DU",
+            "ALD.F",
+            "ALD.HA",
+            "ALD.HM",
+            "ALD.MU",
+            "ALD.STU",
+            "ALD.XETRA",
+            "DAL.MX",
+            "DAL.US",
+            "DEAI34.SA",
+            "HON.MX",
+            "HON.NEO",
+            "HON.US",
+            "HONB34.SA",
+            "OYC.BE",
+            "OYC.F",
+            "OYC.MU",
+            "OYC.STU"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": -0.997,
+            "neg": 0.097,
+            "neu": 0.862,
+            "pos": 0.041
+        }
+    },
+    {
+        "date": "2024-06-13T00:00:00+00:00",
+        "title": "Unlock Generous Growth With These 3 Top Quantum Computing Stocks",
+        "content": "While the technology offers myriad innovations, investors ought to earmark the top quantum computing stocks for the speculative long-term section of their portfolio. Fundamentally, it all comes down to the projected relevance. According to Grand View Research, the global quantum computing market size reached a valuation of $1.05 billion in 2022. Experts project that the&hellip;",
+        "link": "https://investorplace.com/2024/06/unlock-generous-growth-with-these-3-top-quantum-computing-stocks/",
+        "symbols": [
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.681,
+            "neg": 0,
+            "neu": 0.868,
+            "pos": 0.132
+        }
+    }
+]

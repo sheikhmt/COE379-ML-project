@@ -1,0 +1,18 @@
+[
+    {
+        "date": "2024-07-05T08:28:30+00:00",
+        "title": "Foxconn Q2 revenue beats market forecast on AI server demand",
+        "content": "Taiwan's Foxconn , the world's largest contract electronics maker and Apple's biggest iPhone assembler, posted on Friday better-than-expected quarterly revenue on AI server demand, and forecast continued growth in the current quarter.",
+        "link": "https://www.reuters.com/technology/foxconn-q2-revenue-jumps-19-yy-sees-growth-q3-2024-07-05/",
+        "symbols": [
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.273,
+            "neg": 0.045,
+            "neu": 0.876,
+            "pos": 0.079
+        }
+    }
+]

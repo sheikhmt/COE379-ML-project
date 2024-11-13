@@ -1,0 +1,37 @@
+[
+    {
+        "date": "2024-10-25T12:00:57+00:00",
+        "title": "Is This Recent IPO The Next Darling Of The Aerospace Sector?",
+        "content": "Loar produces aircraft spare parts and offers servicing in what is known as the aftermarket. Lately, it has targeted a number of aerospace firms for acquisition.\n\nContinue reading\n\nView comments",
+        "link": "https://finance.yahoo.com/m/88f9398e-f8df-330d-a9d7-ce4e80c0ba9a/is-this-recent-ipo-the-next.html",
+        "symbols": [
+            "0BOE.LSE",
+            "0J46.LSE",
+            "0R2N.LSE",
+            "0REK.LSE",
+            "5UR.F",
+            "5UR.XETRA",
+            "BA.MX",
+            "BA.NEO",
+            "BA.US",
+            "BCO.BE",
+            "BCO.DU",
+            "BCO.F",
+            "BCO.HA",
+            "BCO.HM",
+            "BCO.MU",
+            "BCO.STU",
+            "BCO.XETRA",
+            "BOEI34.SA",
+            "HC1.F",
+            "HC1.STU"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.077,
+            "neg": 0,
+            "neu": 0.956,
+            "pos": 0.044
+        }
+    }
+]

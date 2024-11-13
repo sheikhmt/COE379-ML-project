@@ -1,0 +1,34 @@
+[
+    {
+        "date": "2024-10-22T15:16:34+00:00",
+        "title": "WTA roundup: Sofia Kenin collects upset in Tokyo",
+        "content": "Sofia Kenin knocked out 10th-seeded Xinyu Wang of China 6-1, 6-4 in the first round of the Toray Pan Pacific Open on Tuesday in Tokyo.",
+        "link": "https://www.reuters.com/sports/tennis/wta-roundup-sofia-kenin-collects-upset-tokyo-2024-10-22/",
+        "symbols": [
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0,
+            "neg": 0,
+            "neu": 1,
+            "pos": 0
+        }
+    },
+    {
+        "date": "2024-10-22T00:00:00+00:00",
+        "title": "3 Industrial Dividend Growth Stocks to Buy With $600 and Hold Forever",
+        "content": "For buy-and-hold investors, success is found in diverse companies that can produce year after year.",
+        "link": "https://www.fool.com/investing/2024/10/22/3-industrial-dividend-growth-stocks-to-buy-with-60/",
+        "symbols": [
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.572,
+            "neg": 0,
+            "neu": 0.791,
+            "pos": 0.209
+        }
+    }
+]

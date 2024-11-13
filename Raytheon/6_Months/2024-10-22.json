@@ -1,0 +1,18 @@
+[
+    {
+        "date": "2024-10-22T11:26:45+00:00",
+        "title": "RTX boosts 2024 forecast again on demand for aircraft repairs, defense systems",
+        "content": "RTX on Tuesday raised its 2024 adjusted profit and sales forecasts for the second time, citing strong demand for aircraft repairs and defense systems, and reported better-than-expected quarterly earnings.",
+        "link": "https://www.reuters.com/business/aerospace-defense/rtx-boosts-2024-forecasts-again-demand-aircraft-repairs-defense-systems-2024-10-22/",
+        "symbols": [
+            "RTX.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.735,
+            "neg": 0.044,
+            "neu": 0.731,
+            "pos": 0.225
+        }
+    }
+]

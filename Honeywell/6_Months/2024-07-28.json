@@ -1,0 +1,37 @@
+[
+    {
+        "date": "2024-07-28T12:30:00+00:00",
+        "title": "What Do Many Better-Managed Companies Have? Lots of Climate-Related Jobs",
+        "content": "Companies have been adding employees to help meet emissions goals and ensure that supply chains aren\u2019t disrupted by weather events. It seems to be paying off.\n\nContinue reading\n\nView comments",
+        "link": "https://finance.yahoo.com/m/568e1f81-4f2d-3d72-ac82-da5e72fbe467/what-do-many-better-managed.html",
+        "symbols": [
+            "ALD.BE",
+            "ALD.DU",
+            "ALD.F",
+            "ALD.HA",
+            "ALD.HM",
+            "ALD.MU",
+            "ALD.STU",
+            "ALD.XETRA",
+            "HON.MX",
+            "HON.NEO",
+            "HON.US",
+            "HONB34.SA",
+            "IBM.BA",
+            "IBM.BE",
+            "IBM.DU",
+            "IBM.F",
+            "IBM.HA",
+            "IBM.HM",
+            "IBM.LSE",
+            "IBM.MU"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.649,
+            "neg": 0,
+            "neu": 0.841,
+            "pos": 0.159
+        }
+    }
+]

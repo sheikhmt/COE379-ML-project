@@ -1,0 +1,18 @@
+[
+    {
+        "date": "2024-06-28T21:01:45+00:00",
+        "title": "Women's wing of Modi's party calls for probe into Foxconn India hiring practices",
+        "content": "The women's wing of Indian Prime Minister Narendra Modi's ruling party on Friday urged the National Commission for Women to launch an investigation after Reuters reported that Apple supplier Foxconn rejects married women from iPhone assembly jobs in the country.",
+        "link": "https://www.reuters.com/world/india/womens-wing-modis-party-calls-probe-into-foxconn-india-hiring-practices-2024-06-28/",
+        "symbols": [
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": -0.128,
+            "neg": 0.073,
+            "neu": 0.866,
+            "pos": 0.062
+        }
+    }
+]

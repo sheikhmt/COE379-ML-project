@@ -1,0 +1,29 @@
+[
+    {
+        "date": "2024-08-28T16:39:44+00:00",
+        "title": "Why Honeywell has placed such a big bet on gen AI",
+        "content": "Sheila Jordan is such a big believer of generative artificial intelligence that she\u2019s already put it into the hands of all 95,000 employees at Honeywell.\n\n\u201cThere is not a function in the company that is not thinking about gen AI,\u201d says Jordan, senior vice president and chief digital technology officer at Honeywell since 2020, after long leadership tenures at Symantec, Cisco, and Walt Disney Co.\n\nWhile Jordan acknowledges there remains an ongoing debate between those that have bought into the hype of generative AI and the opposing naysayers that aren\u2019t yet sold on the technology, she is such an ardent believer that Honeywell has already put 16 generative AI use cases into production. To generate excitement internally, Honeywell allows employees to submit ideas for how to use the technology and hundreds of proposals have been submitted.\n\nBut Jordan is also keen to remain fiscally responsible when thinking through when to leverage generative AI. She prioritizes the biggest, most impactful ideas first, those that can increase revenue, boost productivity, or make employees more satisfied at work.\n\nGenerative AI has cascaded across Honeywell in quite a few ways, with some of the earliest use cases stemming from the company\u2019s relationship with Microsoft, who Honeywell relies on for Azure cloud computing services. Around 5,300 of Honeywell\u2019s employees have access to the Microsoft 365 copilot and over 4,500 software engineers are using GitHub to write 90,000 lines of code per week. The engineers find the productivity gains appealing, with Honeywell reporting a 65% usage rate for GitHub.\n\nHoneywell also rolled out some tools, including an AI copilot offering from Moveworks, to automate some IT help desk requests. There\u2019s been a 80% drop in inbound tickets as virtual assistants are able to handle a bulk of the workload, leaving only the most complex issues to be handled by the human IT help desk.\n\nHoneywell has also rolled out a generative AI virtual assistant, called Red, which can quickly pull data from the company\u2019s archive, including 350,000 pages of product manuals and over 50,000 internally crafted articles.\u00a0Red offers responses in more than 100 languages and is accessible to every employee with a laptop computer.\n\nJordan says that one of the biggest problems that companies like Honeywell face today is that they are swimming in too much data that\u2019s not always properly organized. Generative AI can take that data, including unstructured data from video or word documents, and organize it for better insights that \u201cgives you a whole new view of what\u2019s happening in your organization,\u201d says Jordan.\n\nStory continues\n\nHer efforts to recognize data stored across Honeywell predates the generative AI boom, but was opportune given the importance of data to make generative AI work properly. Four years ago, Jordan started to streamline the number of software applications used at Honeywell. When certain vendors, like Salesforce or SAP, are selected, that solution is put into use across the entire organization.\n\nAs a result, Honeywell now has just over 1,000 software applications in use today, sharply lower than 4,500 when Jordan came on board.\n\nHoneywell now leans on Snowflake for all key and critical data, including bookings, billings, inventory, HR, and engineering data. The data-driven approach allows Honeywell to expedite decision making, make more accurate predictions, and even get more inventive on dynamic pricing, which are tactics that allow companies like Honeywell to charge higher prices when factoring inputs including regional preferences, seasonality, and surges in product demand.\n\n\u201cYou can\u2019t have a gen AI strategy unless you have a data strategy,\u201d says Jordan.\n\nBeyond working with Microsoft, Honeywell is also exploring generative AI tools from AWS and has had conversations with Google and others. \u201cI actually think the technology is not as important as the use,\u201d says Jordan, who believes all the large players will provide great AI technologies.\n\nThat said, Jordan doesn\u2019t want a plethora of large language models put in use across Honeywell, as it would make it difficult to adhere to the company\u2019s responsible AI governance and security principles. \u201cIf you have too much technology, it can get hard to manage,\u201d says Jordan.\n\nAnd while a recent survey conducted by Honeywell found that only 17% of AI decision makers in the industrial sector have fully implemented their initial plans for the technology, Jordan says she\u2019s been in technology long enough to remember when corporations were worried about letting their employees use their personal phones for business use. They eventually worked through that problem, and they will again with generative AI.\n\n\u201cYou\u2019re not going to get everything right,\u201d says Jordan. \u201cFigure out the best use case and continue to use it. Because it\u2019s not going to go away.\u201d\n\nJohn Kell\n\nSend thoughts or suggestions to\u00a0CIO Intelligence here.\n\nThis story was originally featured on Fortune.com\n\nView comments",
+        "link": "https://finance.yahoo.com/news/why-honeywell-placed-big-bet-163944142.html",
+        "symbols": [
+            "ALD.BE",
+            "ALD.DU",
+            "ALD.F",
+            "ALD.HA",
+            "ALD.HM",
+            "ALD.MU",
+            "ALD.STU",
+            "ALD.XETRA",
+            "HON.MX",
+            "HON.NEO",
+            "HON.US",
+            "HONB34.SA"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.993,
+            "neg": 0.028,
+            "neu": 0.884,
+            "pos": 0.088
+        }
+    }
+]

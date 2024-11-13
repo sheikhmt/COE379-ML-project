@@ -1,0 +1,55 @@
+[
+    {
+        "date": "2024-07-15T20:08:32+00:00",
+        "title": "Engineering firms to pay $26.5 mln to exit antitrust lawsuit over wages",
+        "content": "Four engineering firms have agreed to pay a combined $26.5 million to resolve a U.S. class action accusing them and RTX unit Pratt & Whitney of artificially suppressing wages for tens of thousands of current and former aerospace workers.",
+        "link": "https://www.reuters.com/legal/litigation/engineering-firms-pay-265-mln-exit-antitrust-lawsuit-over-wages-2024-07-15/",
+        "symbols": [
+            "RTX.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.382,
+            "neg": 0.078,
+            "neu": 0.804,
+            "pos": 0.118
+        }
+    },
+    {
+        "date": "2024-07-15T14:33:34+00:00",
+        "title": "RTX unit Pratt & Whitney completes preliminary design review of engine upgrade",
+        "content": "RTX Corp's Pratt & Whitney said on Monday it has completed the preliminary design review for an engine upgrade to increase durability and performance in all three variants of the F-35 fighter jet.",
+        "link": "https://www.reuters.com/business/aerospace-defense/rtx-unit-pratt-whitney-completes-preliminary-design-review-engine-upgrade-2024-07-15/",
+        "symbols": [
+            "RTX.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.44,
+            "neg": 0,
+            "neu": 0.885,
+            "pos": 0.115
+        }
+    },
+    {
+        "date": "2024-07-15T13:00:00+00:00",
+        "title": "RTX's Pratt &amp; Whitney completes F135 Engine Core Upgrade preliminary design review",
+        "content": "Program remains on track to fully enable the F-35's future needs\n\nEAST HARTFORD, Conn., July 15, 2024 /PRNewswire/ -- Pratt & Whitney, an RTX (NYSE: RTX) business, completed the F135 Engine Core Upgrade's (ECU) preliminary design review (PDR), affirming the ECU's design is on schedule and exceeding expectations. The upgrade will deliver increased engine durability and performance that will fully enable Block 4 and beyond capabilities for all three variants of the F-35 worldwide.\n\nDuring the PDR, Pratt & Whitney and the F-35 Joint Program Office evaluated the ECU's design changes and propulsion technologies, both of which are needed to restore full life to the engine and provide improved performance to enable next generation weapons and sensors.\n\n\"Pratt & Whitney is upgrading the F135 engine with technology from multiple development programs to deliver increased capability and performance for the warfighter,\" said Chris Johnson, vice president of Pratt & Whitney's F135 program. \"Upgrading the F-35's propulsion system to ECU is a critical step toward ensuring the F-35 remains the world's premier air dominance fighter.\"\n\nEarlier this year, the U.S. Department of Defense formally selected the F135 ECU as the only modernization solution for the F-35's propulsion system because it\u00a0assessed that Pratt & Whitney alone \"has the experience, special skills, proprietary technical documentation, software/algorithms, and technical expertise required to furnish the supplies and services.\"\n\n\"The PDR was a successful first step toward the capability the ECU will provide in meeting the challenging performance and durability requirements of the F135,\" said U.S. Navy Capt. Mitchell Grant, F-35 propulsion program manager. \"The ECU will ensure that the U.S. and our international partners remain well positioned to outpace adversary threats.\"\n\nTo date, Pratt & Whitney has delivered more than 1,200 F135 production engines, with more than 860,000 engine flight hours recorded. The F135 ECU will be incorporated into F-35s at the point of production or retrofitted at one of the multiple F135 depot sustainment facilities around the world.\n\nAbout Pratt & Whitney \r\nPratt & Whitney is a world leader in the design, manufacture and service of aircraft engines and auxiliary power units. To learn more visit www.prattwhitney.com.\n\nAbout RTX With more than 185,000 global employees, RTX pushes the limits of technology and science to redefine how we connect and protect our world. Through industry-leading businesses \u2013 Collins Aerospace, Pratt & Whitney, and Raytheon \u2013 we are advancing aviation, engineering integrated defense systems, and developing next-generation technology solutions and manufacturing to help global customers address their most critical challenges. The company, with 2023 sales of $69 billion, is headquartered in Arlington, Virginia.\n\nStory continues\n\nFor questions or to schedule an interview, please contact corporatepr@rtx.com. Cision\n\nView original content:https://www.prnewswire.com/news-releases/rtxs-pratt--whitney-completes-f135-engine-core-upgrade-preliminary-design-review-302196220.html\n\nSOURCE RTX\n\nView comments",
+        "link": "https://finance.yahoo.com/news/rtxs-pratt-whitney-completes-f135-130000068.html",
+        "symbols": [
+            "0R2N.LSE",
+            "5UR.F",
+            "5UR.XETRA",
+            "RTX.US",
+            "RYTT34.SA",
+            "UTC1.HM"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.976,
+            "neg": 0.032,
+            "neu": 0.868,
+            "pos": 0.101
+        }
+    }
+]

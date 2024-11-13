@@ -1,0 +1,18 @@
+[
+    {
+        "date": "2024-08-23T23:27:42+00:00",
+        "title": "Gauff, Swiatek, Sabalenka headline tough US Open women's field",
+        "content": "American Coco Gauff begins her U.S. Open title defence on Arthur Ashe Stadium on Monday, headlining a wide open women's field that includes world number one Iga Swiatek and last year's runner-up Aryna Sabalenka.",
+        "link": "https://www.reuters.com/sports/tennis/gauff-swiatek-sabalenka-headline-tough-us-open-womens-field-2024-08-23/",
+        "symbols": [
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.178,
+            "neg": 0,
+            "neu": 0.92,
+            "pos": 0.08
+        }
+    }
+]

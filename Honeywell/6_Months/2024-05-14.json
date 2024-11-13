@@ -1,0 +1,18 @@
+[
+    {
+        "date": "2024-05-14T11:04:36+00:00",
+        "title": "Foxconn upbeat on AI demand, stands by Sharp following writedown",
+        "content": "Apple supplier Foxconn said on Tuesday it remained confident about strong AI server demand this year driving revenue, and pledged to stand by Japan's Sharp after taking a large, profit-impacting writedown last year.",
+        "link": "https://www.reuters.com/technology/apple-supplier-foxconns-q1-profit-jumps-72-yy-misses-forecasts-2024-05-14/",
+        "symbols": [
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.718,
+            "neg": 0.041,
+            "neu": 0.784,
+            "pos": 0.176
+        }
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "date": "2024-10-10T13:44:00+00:00",
+        "title": "RTX's Arm Gets a Contract to Develop Ultra-Wide Bandgap Semiconductors",
+        "content": "RTX Corporation\u2019s RTX unit, Raytheon, recently received a three-year contract from the Defense Advanced Research Projects Agency to create ultra-wide bandgap semiconductors (UWBGS) using new diamond and aluminum nitride materials. These new semiconductors are expected to improve power delivery and heat management in various electronic devices, including sensors.\n\nDetails of the Contract\n\nThe contract will be completed in two phases. In the first phase, the Raytheon Advanced Technology team will develop thin films made from diamond and aluminum nitride, which will be used in electronic devices. The second phase will focus on improving this technology for larger wafers that can be used in sensors. The work for this contract will take place at Raytheon's facility in Andover, MA.\n\nImportance of RTX\u2019s UWBGS\n\nUWBGS has many advantages over traditional ones. The semiconductors can create compact and powerful radio frequency switches, limiters and amplifiers. Their high thermal conductivity means they can work well at higher temperatures and in tough environments. This makes the semiconductors very reliable for various applications.\r\n\r\nThe latest contract entails the development of UWBGS for devices that can enhance radar and communication systems. These advanced semiconductors will support capabilities like cooperative sensing, electronic warfare and directed energy systems. They will also be important for high-speed weapon systems, like hypersonics, where performance is crucial.\r\n\r\nThe potential of UWBGS to improve military and defense technology will likely change how advanced electronics are used and strengthen the U.S. military's capabilities. With continued advancements, the future of semiconductor technology looks promising.\r\n\r\nThis is likely to have prompted Global Market Insights to forecast a compound annual growth rate of more than 8% for the global military and defense semiconductor market during the 2024-2032 time period.\n\nProspects for RTX\u2019s Peers\n\nOther companies that are likely to enjoy the perks of the expanding global semiconductor industry have been discussed below.\r\n \r\nLockheed Martin Corporation LMT: The company teamed up with GlobalFoundries in June 2023 to enhance U.S. semiconductor manufacturing. This collaboration focuses on improving the security and resilience of supply chains for national defense systems by advancing chip technologies like 3D integration and gallium nitride on silicon.\r\n \r\nMoreover, in April 2024, it was announced that Lockheed Martin together with Intel Corporation and Altera, an Intel Company, will work to support the Stimulating Transition for Advanced Microelectronics Packaging program. Under this joint venture, LMT aims to develop a low-size, weight and power (SWaP), Sensor Open Systems Architecture aligned airborne electronic defense system, utilizing Altera\u2019s Multi-Chip Package for expected use on the MH-60R multi-mission helicopter.\r\n\r\nNorthrop Grumman Corporation NOC: The company has been offering a wide range of trusted foundry and semiconductor services that deliver high-performing and reliable microelectronics for more than 50 years.\r\n\r\nIn particular, NOC operates a leading semiconductor foundry at Space Park, specializing in III-V compound semiconductors. The foundry designs and manufactures advanced microelectronics for various applications, including satellite communications and commercial systems like smartphones.\r\n\r\nThe Boeing Company BA: It is expanding its semiconductor capabilities through a partnership with the Korea Evaluation Institute of Industrial Technology and the Korea Institute for Advancement of Technology. This collaboration focuses on developing advanced semiconductor technologies for aerospace applications.\r\n \r\nBy integrating cutting-edge semiconductor innovations into aircraft systems, Boeing aims to enhance the performance, reliability and efficiency of its aerospace products.\n\nStory continues\n\nWant the latest recommendations from Zacks Investment Research? Today, you can download 7 Best Stocks for the Next 30 Days. Click to get this free report\n\nThe Boeing Company (BA) : Free Stock Analysis Report\n\nLockheed Martin Corporation (LMT) : Free Stock Analysis Report\n\nNorthrop Grumman Corporation (NOC) : Free Stock Analysis Report\n\nRTX Corporation (RTX) : Free Stock Analysis Report\n\nTo read this article on Zacks.com click here.\n\nZacks Investment Research\n\nView comments",
+        "link": "https://finance.yahoo.com/news/rtxs-arm-gets-contract-develop-134400989.html",
+        "symbols": [
+            "0BOE.LSE",
+            "0K92.LSE",
+            "0R3E.LSE",
+            "5UR.F",
+            "5UR.XETRA",
+            "BA.MX",
+            "BA.NEO",
+            "BA.US",
+            "BCO.BE",
+            "BCO.DU",
+            "BCO.F",
+            "BCO.HA",
+            "BCO.HM",
+            "BCO.MU",
+            "BCO.STU",
+            "BCO.XETRA",
+            "BOEI34.SA",
+            "LMT.MX",
+            "LMT.US",
+            "LMTB34.SA"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.998,
+            "neg": 0.009,
+            "neu": 0.823,
+            "pos": 0.169
+        }
+    }
+]

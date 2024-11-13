@@ -1,0 +1,18 @@
+[
+    {
+        "date": "2024-09-24T19:28:35+00:00",
+        "title": "US State Dept OKs potential sale of Stinger missiles to Egypt for $740 mln",
+        "content": "The U.S. Department of State has approved the potential sale of 720 Stinger missiles to Egypt for $740 million, the Pentagon said on Tuesday.",
+        "link": "https://www.reuters.com/world/us-state-dept-oks-potential-sale-stinger-missiles-egypt-740-mln-2024-09-24/",
+        "symbols": [
+            "RTX.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.422,
+            "neg": 0,
+            "neu": 0.891,
+            "pos": 0.109
+        }
+    }
+]

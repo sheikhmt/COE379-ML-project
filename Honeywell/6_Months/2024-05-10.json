@@ -1,0 +1,18 @@
+[
+    {
+        "date": "2024-05-10T06:45:03+00:00",
+        "title": "Foxconn's Q1 profit to jump from low base, AI to power growth",
+        "content": "Taiwan's Foxconn , the world's largest contract electronics maker, is expected to report on Tuesday that first-quarter profit more than doubled on robust demand for artificial intelligence servers and after coming off a low base a year ago.",
+        "link": "https://www.reuters.com/technology/foxconns-q1-profit-jump-low-base-ai-power-growth-2024-05-10/",
+        "symbols": [
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.7,
+            "neg": 0.086,
+            "neu": 0.714,
+            "pos": 0.2
+        }
+    }
+]

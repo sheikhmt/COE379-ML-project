@@ -1,0 +1,69 @@
+[
+    {
+        "date": "2024-08-27T21:35:06+00:00",
+        "title": "U.S. stocks higher at close of trade; Dow Jones Industrial Average up 0.02%",
+        "content": "Investing.com \u2013 U.S. stocks were higher after the close on Tuesday, as gains in the Financials, Technology and Telecoms sectors led shares higher.\n\nAt the close in NYSE, the Dow Jones Industrial Average rose 0.02% to hit a new all time high, while the S&P 500 index gained 0.16%, and the NASDAQ Composite index added 0.17%.\n\nThe best performers of the session on the Dow Jones Industrial Average were Nike Inc (NYSE:NKE), which rose 1.20% or 1.01 points to trade at 85.29 at the close. Meanwhile, Honeywell International Inc (NASDAQ:HON) added 1.11% or 2.26 points to end at 206.11 and Visa Inc Class A (NYSE:V) was up 0.94% or 2.51 points to 270.72 in late trade.\n\nThe worst performers of the session were Amazon.com Inc (NASDAQ:AMZN), which fell 1.36% or 2.38 points to trade at 173.12 at the close. Chevron Corp (NYSE:CVX) declined 1.04% or 1.55 points to end at 146.95 and Walt Disney Company (NYSE:DIS) was down 0.96% or 0.88 points to 90.90.\n\nThe top performers on the S&P 500 were ResMed Inc (NYSE:RMD) which rose 7.26% to 242.25, Insulet Corporation (NASDAQ:PODD) which was up 6.58% to settle at 192.58 and Royal Caribbean Cruises Ltd (NYSE:RCL) which gained 4.30% to close at 169.02.\n\nThe worst performers were Walgreens Boots Alliance Inc (NASDAQ:WBA) which was down 8.96% to 9.45 in late trade, Paramount Global Class B (NASDAQ:PARA) which lost 7.15% to settle at 10.52 and Martin Marietta Materials Inc (NYSE:MLM) which was down 4.58% to 518.57 at the close.\n\nThe top performers on the NASDAQ Composite were VOXX International Corporation (NASDAQ:VOXX) which rose 68.07% to 4.79, Addex Therapeutics Ltd (NASDAQ:ADXN) which was up 54.61% to settle at 11.58 and Ensysce Biosciences Inc (NASDAQ:ENSC) which gained 49.17% to close at 0.64.\n\nThe worst performers were COSCIENS Biopharma Inc (NASDAQ:CSCI) which was down 32.42% to 3.96 in late trade, Jiuzi Holdings Inc (NASDAQ:JZXN) which lost 28.83% to settle at 1.58 and Invivyd Inc (NASDAQ:IVVD) which was down 28.67% to 0.92 at the close.\n\nFalling stocks outnumbered advancing ones on the New York Stock Exchange by 1652 to 1163 and 103 ended unchanged; on the Nasdaq Stock Exchange, 2090 fell and 1209 advanced, while 143 ended unchanged.\n\nShares in ResMed Inc (NYSE:RMD) rose to 52-week highs; rising 7.26% or 16.39 to 242.25. Shares in Walgreens Boots Alliance Inc (NASDAQ:WBA) fell to 5-year lows; down 8.96% or 0.93 to 9.45. Shares in COSCIENS Biopharma Inc (NASDAQ:CSCI) fell to 5-year lows; down 32.42% or 1.90 to 3.96. Shares in Jiuzi Holdings Inc (NASDAQ:JZXN) fell to all time lows; losing 28.83% or 0.64 to 1.58.\n\nStory continues\n\nThe CBOE Volatility Index, which measures the implied volatility of S&P 500 options, was down 4.46% to 15.43.\n\nGold Futures for December delivery was up 0.19% or 4.85 to $2,560.05 a troy ounce. Elsewhere in commodities trading, Crude oil for delivery in October fell 2.01% or 1.56 to hit $75.86 a barrel, while the November Brent oil contract fell 1.73% or 1.39 to trade at $78.97 a barrel.\n\nEUR/USD was unchanged 0.21% to 1.12, while USD/JPY fell 0.38% to 143.98.\n\nThe US Dollar Index Futures was down 0.27% at 100.46.\n\nRelated Articles\n\nU.S. stocks higher at close of trade; Dow Jones Industrial Average up 0.02%\n\nMexico stocks lower at close of trade; S&P/BMV IPC down 1.31%\n\nWall Street ends up as investors focus on Nvidia results\n\nView comments",
+        "link": "https://finance.yahoo.com/news/u-stocks-higher-close-trade-213506207.html",
+        "symbols": [
+            "91D.F",
+            "ADXN.US",
+            "AMZN.US",
+            "COMP.US",
+            "CSCI.US",
+            "CVX.US",
+            "DIS.US",
+            "DJI.INDX",
+            "ENSC.US",
+            "GSPC.INDX",
+            "HON.US",
+            "IVVD.US",
+            "IXIC.INDX",
+            "JZXN.US",
+            "MLM.US",
+            "NKE.US",
+            "PARA.US",
+            "PODD.US",
+            "RCL.US",
+            "RMD.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.202,
+            "neg": 0.054,
+            "neu": 0.886,
+            "pos": 0.059
+        }
+    },
+    {
+        "date": "2024-08-27T06:15:15+00:00",
+        "title": "Sabalenka cruises past Hon in US Open first round",
+        "content": "Aryna Sabalenka opened her U.S. Open campaign with a 6-3 6-3 win over qualifier Priscilla Hon on Monday, with the Belarusian fighting hard for every point in a dominant performance to wrap up the opening night action at Louis Armstrong Stadium.",
+        "link": "https://www.reuters.com/sports/tennis/sabalenka-cruises-past-hon-us-open-first-round-2024-08-27/",
+        "symbols": [
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0.226,
+            "neg": 0.089,
+            "neu": 0.824,
+            "pos": 0.087
+        }
+    },
+    {
+        "date": "2024-08-27T04:58:33+00:00",
+        "title": "US Open day one",
+        "content": "Highlights of the first day at the U.S. Open at Flushing Meadows on Monday (times GMT):",
+        "link": "https://www.reuters.com/sports/tennis/us-open-day-one-2024-08-27/",
+        "symbols": [
+            "HON.US"
+        ],
+        "tags": [],
+        "sentiment": {
+            "polarity": 0,
+            "neg": 0,
+            "neu": 1,
+            "pos": 0
+        }
+    }
+]
