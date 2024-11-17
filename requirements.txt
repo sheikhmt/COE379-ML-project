@@ -11,3 +11,4 @@ yfinance
 requests
 scikit-learn
 plotly
+google-cloud-storage

@@ -10,6 +10,8 @@ import plotly.graph_objects as go
 from scipy import stats
 from secret import FINHUB_KEY
 import scipy
+from datetime import datetime
+
 
 # Initialize Finnhub client
 finnhub_client = finnhub.Client(api_key=FINHUB_KEY)
@@ -19,13 +21,19 @@ tokenizer = AutoTokenizer.from_pretrained("ProsusAI/finbert")
 model_finbert = AutoModelForSequenceClassification.from_pretrained("ProsusAI/finbert")
 
 
-# Fetch and preprocess sentiment scores
 def get_sentiment_scores(start_date, end_date, company="RTX"):
     news_data = finnhub_client.company_news(company, _from=start_date, to=end_date)
     summaries = [item["summary"] for item in news_data]
 
+    # Convert datetime from Unix timestamp to a formatted date string
+    dates = [
+        datetime.fromtimestamp(item["datetime"]).strftime("%Y-%m-%d")
+        for item in news_data
+    ]
+
     sentiment_scores = []
-    for summary in summaries:
+    sentiment_dates = []
+    for summary, date in zip(summaries, dates):
         with torch.no_grad():
             input_sequence = tokenizer(
                 summary,
@@ -38,18 +46,18 @@ def get_sentiment_scores(start_date, end_date, company="RTX"):
             scores = scipy.special.softmax(logits.numpy().squeeze())
             sentiment_score = scores[2] - scores[0]  # Net positive - negative score
             sentiment_scores.append(sentiment_score)
+            sentiment_dates.append(date)
 
-    # Aggregate daily sentiment score
-    daily_scores = pd.Series(sentiment_scores).resample("D").mean()
+    # Create DataFrame with dates as index
+    sentiment_df = pd.DataFrame(
+        {"Sentiment": sentiment_scores}, index=pd.to_datetime(sentiment_dates)
+    )
+
+    # Aggregate daily sentiment scores by calculating the mean
+    daily_scores = sentiment_df.resample("D").mean()
     daily_scores = daily_scores.dropna()
 
-    sentiment_df = pd.DataFrame(
-        {
-            "Date": daily_scores.index,
-            "Sentiment": daily_scores.values,
-        }
-    )
-    return sentiment_df.set_index("Date")
+    return daily_scores
 
 
 # Fetch stock data and preprocess
