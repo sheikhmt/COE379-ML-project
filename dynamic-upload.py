@@ -6,7 +6,7 @@ from google.cloud import storage
 from time import sleep
 from secret import FINHUB_KEY
 
-
+# Initialize Finnhub client
 finnhub_client = finnhub.Client(api_key=FINHUB_KEY)
 
 # Initialize Google Cloud Storage client
@@ -15,9 +15,9 @@ storage_client = storage.Client()
 # Define bucket and directories for each company
 BUCKET_NAME = "fin_analysis_data"
 COMPANIES = {
-    "RTX": "raytheon/news_articles",
-    "HON": "honeywell/news_articles",
-    "LMT": "lockheed/news_articles",
+    "RTX": "raytheon/news_articles/to_delete",
+    "NOC": "northrop/news_articles/to_delete",
+    "LMT": "lockheed/news_articles/to_delete",
 }
 
 
@@ -37,10 +37,10 @@ def get_finnhub_news(company, start_date, end_date):
     return filtered_news
 
 
-def save_to_gcs(company, data):
+def save_to_gcs(company, data, file_date):
     """Save the news data as a JSON file to Google Cloud Storage"""
-    # Create the JSON file name based on current date
-    file_name = f"{company}_{datetime.datetime.now().strftime('%Y-%m-%d')}_news.json"
+    # Create the JSON file name based on the specific date
+    file_name = f"{company}_{file_date}_news.json"
 
     # Convert data to JSON string
     json_data = json.dumps(data, indent=4)
@@ -55,33 +55,37 @@ def save_to_gcs(company, data):
 
 
 def main():
-    # Define the date range (last 24 hours, for example)
-    end_date = datetime.datetime.now()
-    start_date = end_date - datetime.timedelta(days=1)
-
-    # Format the dates as strings (YYYY-MM-DD)
-    start_date_str = start_date.strftime("%Y-%m-%d")
-    end_date_str = end_date.strftime("%Y-%m-%d")
-
     # Loop over each company to fetch and upload news
     for company in COMPANIES.keys():
-        try:
-            print(
-                f"Fetching news for {company} from {start_date_str} to {end_date_str}..."
-            )
-            news_data = get_finnhub_news(company, start_date_str, end_date_str)
+        print(f"Processing news for {company}...")
 
-            if news_data:
-                print(f"Saving {len(news_data)} articles for {company} to GCS...")
-                save_to_gcs(company, news_data)
-            else:
-                print(f"No news articles found for {company} during this period.")
+        # Loop over the last 7 days
+        for day_offset in range(7):
+            try:
+                # Define the date range for the current day
+                end_date = datetime.datetime.now() - datetime.timedelta(days=day_offset)
+                start_date = end_date - datetime.timedelta(days=1)
 
-        except Exception as e:
-            print(f"Error processing {company}: {e}")
+                # Format the dates as strings (YYYY-MM-DD)
+                start_date_str = start_date.strftime("%Y-%m-%d")
+                end_date_str = end_date.strftime("%Y-%m-%d")
 
-        # Sleep to avoid hitting API rate limits (if necessary)
-        sleep(5)
+                print(
+                    f"Fetching news for {company} from {start_date_str} to {end_date_str}..."
+                )
+                news_data = get_finnhub_news(company, start_date_str, end_date_str)
+
+                if news_data:
+                    print(f"Saving {len(news_data)} articles for {company} to GCS...")
+                    save_to_gcs(company, news_data, start_date_str)
+                else:
+                    print(f"No news articles found for {company} on {start_date_str}.")
+
+            except Exception as e:
+                print(f"Error processing {company} for {start_date_str}: {e}")
+
+            # Sleep to avoid hitting API rate limits (if necessary)
+            sleep(5)
 
 
 if __name__ == "__main__":
