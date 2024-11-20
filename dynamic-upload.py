@@ -5,12 +5,15 @@ import finnhub
 from google.cloud import storage
 from time import sleep
 from secret import FINHUB_KEY
+from google.oauth2 import service_account
 
 # Initialize Finnhub client
 finnhub_client = finnhub.Client(api_key=FINHUB_KEY)
 
 # Initialize Google Cloud Storage client
-storage_client = storage.Client()
+credentials_path = "D:/Coding/IntroML/coe379-ml-project-81b7de97df4a.json"
+credentials = service_account.Credentials.from_service_account_file(credentials_path)
+storage_client = storage.Client(credentials=credentials)
 
 # Define bucket and directories for each company
 BUCKET_NAME = "fin_analysis_data"

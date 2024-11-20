@@ -279,14 +279,20 @@ def plot_results(data, prediction, prediction_interval):
 
 
 def main():
-    end_date = "2024-11-17"
-    start_date = "2024-11-11"
+    # Set dates dynamically to ensure accurate range
+    today = datetime.today().strftime("%Y-%m-%d")
+    end_date = (datetime.today() - timedelta(days=1)).strftime("%Y-%m-%d")  # Yesterday
+    start_date = (datetime.today() - timedelta(days=7)).strftime(
+        "%Y-%m-%d"
+    )  # 7 days ago
     company = "RTX"
 
     try:
         # Fetch data
         sentiment_data = get_sentiment_scores(company, start_date, end_date)
-        stock_data = fetch_stock_data(company, start_date, end_date)
+        stock_data = fetch_stock_data(
+            company, start_date, today
+        )  # Include today's data
 
         # Prepare features and train model
         data = prepare_features(stock_data, sentiment_data)
@@ -294,14 +300,10 @@ def main():
         if len(data) < 5:
             raise ValueError(f"Insufficient data points. Got {len(data)} days.")
 
-        # Make prediction
+        # Make prediction for today
         prediction, prediction_interval, cv_mape = train_and_predict(data)
 
-        next_day = (
-            datetime.strptime(end_date, "%Y-%m-%d") + timedelta(days=1)
-        ).strftime("%Y-%m-%d")
-
-        print(f"\nPrediction Summary for {next_day}:")
+        print(f"\nPrediction Summary for {today}:")
         print(f"Last Close Price: ${data['Close'].iloc[-1]:.2f}")
         print(f"Predicted Price: ${prediction:.2f}")
         print(
