@@ -12,3 +12,5 @@ requests
 scikit-learn
 plotly
 google-cloud-storage
+finnhub-python
+google-auth

@@ -11,7 +11,9 @@ from google.oauth2 import service_account
 finnhub_client = finnhub.Client(api_key=FINHUB_KEY)
 
 # Initialize Google Cloud Storage client
-credentials_path = "D:/Coding/IntroML/coe379-ml-project-81b7de97df4a.json"
+# credentials_path = "D:/Coding/IntroML/coe379-ml-project-81b7de97df4a.json"
+credentials_path = "C:/Users/arish/Coding/MLClass/coe379-ml-project-55cd4cde117a.json"
+
 credentials = service_account.Credentials.from_service_account_file(credentials_path)
 storage_client = storage.Client(credentials=credentials)
 
@@ -63,7 +65,7 @@ def main():
         print(f"Processing news for {company}...")
 
         # Loop over the last 7 days
-        for day_offset in range(7):
+        for day_offset in range(20):
             try:
                 # Define the date range for the current day
                 end_date = datetime.datetime.now() - datetime.timedelta(days=day_offset)

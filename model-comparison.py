@@ -5,15 +5,23 @@ import numpy as np
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from google.cloud import storage
 import yfinance as yf
-from sklearn.linear_model import LinearRegression, Ridge
-from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
+from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
+from sklearn.svm import SVR
+from sklearn.neural_network import MLPRegressor
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error, r2_score
 from sklearn.model_selection import TimeSeriesSplit
 import plotly.graph_objects as go
 import scipy
 from scipy import stats
 from datetime import datetime, timedelta
 from google.oauth2 import service_account
+import warnings
 
+warnings.filterwarnings("ignore")
+
+# [Previous imports and configurations remain the same...]
 # Existing credentials and initialization code remains the same
 # credentials_path = "D:/Coding/IntroML/coe379-ml-project-81b7de97df4a.json"
 credentials_path = "C:/Users/arish/Coding/MLClass/coe379-ml-project-55cd4cde117a.json"
@@ -175,9 +183,86 @@ def prepare_features(stock_df, sentiment_df, window=2):  # Reduced window size
     return data
 
 
+def evaluate_models(X_train, X_test, y_train, y_test):
+    """Evaluate multiple models and return their performance metrics."""
+    models = {
+        "Ridge": Ridge(alpha=1.0),
+        "Lasso": Lasso(alpha=1.0),
+        "ElasticNet": ElasticNet(alpha=1.0, l1_ratio=0.5),
+        "LinearRegression": LinearRegression(),
+        "RandomForest": RandomForestRegressor(n_estimators=100, random_state=42),
+        "GradientBoosting": GradientBoostingRegressor(
+            n_estimators=100, random_state=42
+        ),
+        "SVR": SVR(kernel="rbf"),
+        "MLP": MLPRegressor(
+            hidden_layer_sizes=(100, 50), max_iter=1000, random_state=42
+        ),
+    }
+
+    results = {}
+    scaler = StandardScaler()
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled = scaler.transform(X_test)
+
+    for name, model in models.items():
+        try:
+            # Train model
+            model.fit(X_train_scaled, y_train)
+
+            # Make predictions
+            y_pred = model.predict(X_test_scaled)
+
+            # Calculate metrics
+            mse = mean_squared_error(y_test, y_pred)
+            mape = mean_absolute_percentage_error(y_test, y_pred)
+            r2 = r2_score(y_test, y_pred)
+
+            results[name] = {
+                "model": model,
+                "mse": mse,
+                "mape": mape,
+                "r2": r2,
+                "scaler": scaler,
+            }
+
+        except Exception as e:
+            print(f"Error with {name}: {str(e)}")
+
+    return results
+
+
+def plot_model_comparison(results):
+    """Plot model comparison results."""
+    fig = go.Figure()
+
+    models = list(results.keys())
+    mape_scores = [results[model]["mape"] * 100 for model in models]
+    r2_scores = [results[model]["r2"] for model in models]
+
+    # Add MAPE bars
+    fig.add_trace(
+        go.Bar(name="MAPE (%)", x=models, y=mape_scores, marker_color="indianred")
+    )
+
+    # Add R² bars
+    fig.add_trace(
+        go.Bar(name="R² Score", x=models, y=r2_scores, marker_color="lightseagreen")
+    )
+
+    fig.update_layout(
+        title="Model Performance Comparison",
+        barmode="group",
+        xaxis_title="Models",
+        yaxis_title="Score",
+        template="plotly_white",
+    )
+
+    return fig
+
+
 def train_and_predict(data, prediction_window=1):
-    """Train model with cross-validation and confidence intervals."""
-    # Prepare features
+    """Enhanced training and prediction with model comparison."""
     feature_cols = [
         "SMA_5",
         "SMA_20",
@@ -195,52 +280,65 @@ def train_and_predict(data, prediction_window=1):
     # Align X with shifted y
     X = X.iloc[:-prediction_window]
 
-    # Initialize models
-    model = Ridge(alpha=1.0)  # Use Ridge regression for better stability
+    # Split the data temporally
+    train_size = int(len(X) * 0.8)
+    X_train, X_test = X.iloc[:train_size], X.iloc[train_size:]
+    y_train, y_test = y.iloc[:train_size], y.iloc[train_size:]
 
-    # Modified time series split for small dataset
-    n_samples = len(X)
-    if n_samples <= 3:
-        # For very small datasets, use a simple train-test split
-        train_size = max(1, n_samples - 1)  # Leave at least 1 sample for testing
-        X_train, X_test = X.iloc[:train_size], X.iloc[train_size:]
-        y_train, y_test = y.iloc[:train_size], y.iloc[train_size:]
+    # Evaluate all models
+    results = evaluate_models(X_train, X_test, y_train, y_test)
 
-        model.fit(X_train, y_train)
-        pred = model.predict(X_test)
-        cv_scores = [mean_absolute_percentage_error(y_test, pred)]
-    else:
-        # For larger datasets, use TimeSeriesSplit with appropriate number of splits
-        n_splits = min(2, n_samples - 1)  # Use at most n_samples-1 splits
-        tscv = TimeSeriesSplit(n_splits=n_splits)
-        cv_scores = []
-        predictions = []
+    # Select best model based on MAPE
+    best_model_name = min(results.keys(), key=lambda k: results[k]["mape"])
+    best_model_info = results[best_model_name]
 
-        for train_idx, test_idx in tscv.split(X):
-            X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
-            y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
+    print(f"\nModel Performance Summary:")
+    for name, info in results.items():
+        print(f"{name}:")
+        print(f"  MAPE: {info['mape']*100:.2f}%")
+        print(f"  R2 Score: {info['r2']:.4f}")
+    print(f"\nSelected Model: {best_model_name}")
 
-            model.fit(X_train, y_train)
-            pred = model.predict(X_test)
-            predictions.extend(pred)
-            cv_scores.append(mean_absolute_percentage_error(y_test, pred))
+    # Create and display model comparison plot
+    comparison_fig = plot_model_comparison(results)
+    comparison_fig.show()
 
-    # Final prediction
-    model.fit(X, y)  # Fit on all data
-    last_features = X.iloc[-1:]
-    prediction = model.predict(last_features)[0]
+    # Prepare final prediction with best model
+    scaler = best_model_info["scaler"]
+    model = best_model_info["model"]
+
+    # Scale the entire dataset and retrain on all data
+    X_scaled = scaler.fit_transform(X)
+    model.fit(X_scaled, y)
+
+    # Prepare last features for prediction
+    last_features = X.iloc[-1:].copy()
+    last_features_scaled = scaler.transform(last_features)
+
+    # Make prediction
+    prediction = model.predict(last_features_scaled)[0]
+
+    # Calculate prediction interval using bootstrap
+    n_iterations = 100
+    bootstrap_predictions = []
+    for _ in range(n_iterations):
+        # Sample with replacement
+        idx = np.random.randint(0, len(X), size=len(X))
+        X_boot = X_scaled[idx]
+        y_boot = y.iloc[idx]
+
+        # Fit model and predict
+        model.fit(X_boot, y_boot)
+        bootstrap_predictions.append(model.predict(last_features_scaled)[0])
 
     # Calculate prediction interval
     confidence_level = 0.95
-    cv_std = np.std(cv_scores) if len(cv_scores) > 1 else np.mean(cv_scores) * 0.1
-    margin_of_error = stats.norm.ppf((1 + confidence_level) / 2) * cv_std
-
-    prediction_interval = (
-        prediction * (1 - margin_of_error),
-        prediction * (1 + margin_of_error),
+    interval = np.percentile(
+        bootstrap_predictions,
+        [100 * (1 - confidence_level) / 2, 100 * (1 + confidence_level) / 2],
     )
 
-    return prediction, prediction_interval, np.mean(cv_scores)
+    return prediction, interval, best_model_info["mape"], best_model_name
 
 
 def plot_results(data, prediction, prediction_interval):
@@ -317,7 +415,7 @@ def main():
             raise ValueError(f"Insufficient data points. Got {len(data)} days.")
 
         # Make prediction
-        prediction, prediction_interval, cv_mape = train_and_predict(data)
+        # prediction, prediction_interval, cv_mape = train_and_predict(data)
 
         # Get actual closing price for comparison
         actual_price = (
@@ -334,8 +432,12 @@ def main():
             else None
         )
 
+        # Make prediction with model comparison
+        prediction, prediction_interval, cv_mape, best_model = train_and_predict(data)
+
         # Print results
         print(f"\nPrediction Summary for {target_date}:")
+        print(f"Best Model: {best_model}")
         print(f"Last Known Close Price (11/21): ${data['Close'].iloc[-1]:.2f}")
         print(f"Predicted Price: ${prediction:.2f}")
         print(
