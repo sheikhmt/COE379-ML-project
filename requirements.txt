@@ -14,3 +14,4 @@ plotly
 google-cloud-storage
 finnhub-python
 google-auth
+xgboost

@@ -18,6 +18,7 @@ from scipy import stats
 from datetime import datetime, timedelta
 from google.oauth2 import service_account
 import warnings
+from xgboost import XGBRegressor
 
 warnings.filterwarnings("ignore")
 
@@ -110,7 +111,7 @@ def fetch_stock_data(ticker, start_date, end_date):
     start_dt = datetime.strptime(start_date, "%Y-%m-%d")
     end_dt = datetime.strptime(end_date, "%Y-%m-%d")
 
-    # Add more buffer days for calculating technical indicators
+    # Add 30 more days for calculating technical indicators
     buffer_start = (start_dt - timedelta(days=30)).strftime("%Y-%m-%d")
     buffer_end = end_dt.strftime("%Y-%m-%d")
 
@@ -185,29 +186,93 @@ def prepare_features(stock_df, sentiment_df, window=2):  # Reduced window size
 
 def evaluate_models(X_train, X_test, y_train, y_test):
     """Evaluate multiple models and return their performance metrics."""
+    # Define models with preset hyperparameters - short term (2 week)
     models = {
-        "Ridge": Ridge(alpha=1.0),
-        "Lasso": Lasso(alpha=1.0),
-        "ElasticNet": ElasticNet(alpha=1.0, l1_ratio=0.5),
-        "LinearRegression": LinearRegression(),
-        "RandomForest": RandomForestRegressor(n_estimators=100, random_state=42),
-        "GradientBoosting": GradientBoostingRegressor(
-            n_estimators=100, random_state=42
-        ),
-        "SVR": SVR(kernel="rbf"),
-        "MLP": MLPRegressor(
-            hidden_layer_sizes=(100, 50), max_iter=1000, random_state=42
-        ),
+        "LinearRegression": {
+            "model": LinearRegression(),
+            "description": "Basic linear regression model",
+        },
+        "Ridge": {
+            "model": Ridge(alpha=0.8, solver="auto"),
+            "description": "Standard regularized linear regression",
+        },
+        "Lasso": {
+            "model": Lasso(alpha=0.8, selection="cyclic"),
+            "description": "Linear regression with L1 regularization",
+        },
+        "ElasticNet": {
+            "model": ElasticNet(alpha=0.001, l1_ratio=0.5, selection="cyclic"),
+            "description": "Combination of L1 and L2 regularization",
+        },
+        "RandomForest": {
+            "model": RandomForestRegressor(
+                n_estimators=50, max_depth=10, min_samples_split=5, random_state=42
+            ),
+            "description": "Ensemble method with decision trees",
+        },
+        "XGBoost": {
+            "model": XGBRegressor(
+                n_estimators=50, learning_rate=0.1, max_depth=5, random_state=42
+            ),
+            "description": "Gradient boosting algorithm",
+        },
     }
+
+    # Define models with preset hyperparameters - long term (1 month)
+    # models = {
+    #     "LinearRegression": {
+    #         "model": LinearRegression(),
+    #         "description": "Basic linear regression model",
+    #     },
+    #     "Ridge": {
+    #         "model": Ridge(
+    #             alpha=1.0, solver="auto"
+    #         ),  # Slightly increased regularization
+    #         "description": "Standard regularized linear regression",
+    #     },
+    #     "Lasso": {
+    #         "model": Lasso(
+    #             alpha=0.5, selection="cyclic"
+    #         ),  # Lowered alpha for less aggressive regularization
+    #         "description": "Linear regression with L1 regularization",
+    #     },
+    #     "ElasticNet": {
+    #         "model": ElasticNet(
+    #             alpha=0.01, l1_ratio=0.7, selection="cyclic"
+    #         ),  # More focus on L1 regularization
+    #         "description": "Combination of L1 and L2 regularization",
+    #     },
+    #     "RandomForest": {
+    #         "model": RandomForestRegressor(
+    #             n_estimators=200,  # Increased number of trees for better stability
+    #             max_depth=15,  # Allow deeper trees for more complex patterns
+    #             min_samples_split=4,  # Slightly lower split requirement
+    #             random_state=42,
+    #         ),
+    #         "description": "Ensemble method with decision trees",
+    #     },
+    #     "XGBoost": {
+    #         "model": XGBRegressor(
+    #             n_estimators=300,  # More boosting rounds
+    #             learning_rate=0.05,  # Lower learning rate for better convergence
+    #             max_depth=7,  # Slightly deeper trees
+    #             colsample_bytree=0.8,  # Random feature subsampling for regularization
+    #             subsample=0.8,  # Row subsampling to reduce overfitting
+    #             random_state=42,
+    #         ),
+    #         "description": "Gradient boosting algorithm",
+    #     },
+    # }
 
     results = {}
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
-    for name, model in models.items():
+    for name, model_info in models.items():
         try:
-            # Train model
+            # Fit the model
+            model = model_info["model"]
             model.fit(X_train_scaled, y_train)
 
             # Make predictions
@@ -224,6 +289,7 @@ def evaluate_models(X_train, X_test, y_train, y_test):
                 "mape": mape,
                 "r2": r2,
                 "scaler": scaler,
+                "description": model_info["description"],
             }
 
         except Exception as e:
@@ -294,9 +360,9 @@ def train_and_predict(data, prediction_window=1):
 
     print(f"\nModel Performance Summary:")
     for name, info in results.items():
-        print(f"{name}:")
+        print(f"{name} ({info['description']}):")
         print(f"  MAPE: {info['mape']*100:.2f}%")
-        print(f"  R2 Score: {info['r2']:.4f}")
+        print(f"  R2 Score: {info['r2']}")
     print(f"\nSelected Model: {best_model_name}")
 
     # Create and display model comparison plot
@@ -395,8 +461,8 @@ def main():
     # Updated date range
     target_date = "2024-11-22"  # Last trading day we want to predict
     end_date = "2024-11-21"  # Day before target date
-    start_date = "2024-11-04"  # Extended start date
-    company = "NOC"
+    start_date = "2024-11-11"  # Extended start date
+    company = "LMT"
 
     try:
         # Fetch data with extended date range
@@ -443,7 +509,7 @@ def main():
         print(
             f"95% Prediction Interval: ${prediction_interval[0]:.2f} to ${prediction_interval[1]:.2f}"
         )
-        print(f"Model MAPE: {cv_mape:.2f}%")
+        print(f"Model MAPE: {cv_mape:.6f}%")
 
         if actual_price is not None:
             prediction_error = abs(prediction - actual_price) / actual_price * 100
