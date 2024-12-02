@@ -462,7 +462,7 @@ def main():
     target_date = "2024-11-22"  # Last trading day we want to predict
     end_date = "2024-11-21"  # Day before target date
     start_date = "2024-11-11"  # Extended start date
-    company = "LMT"
+    company = "RTX"
 
     try:
         # Fetch data with extended date range
@@ -584,7 +584,7 @@ def main():
 
         # Update layout with dual y-axis
         fig.update_layout(
-            title=f"NOC Stock Price Prediction vs Actual for {target_date}",
+            title=f"{company} Stock Price Prediction vs Actual for {target_date}",
             xaxis_title="Date",
             yaxis_title="Price ($)",
             yaxis2=dict(
