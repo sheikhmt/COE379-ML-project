@@ -25,8 +25,8 @@ warnings.filterwarnings("ignore")
 
 # [Previous imports and configurations remain the same...]
 # Existing credentials and initialization code remains the same
-# credentials_path = "D:/Coding/IntroML/coe379-ml-project-81b7de97df4a.json"
-credentials_path = "C:/Users/arish/Coding/MLClass/coe379-ml-project-55cd4cde117a.json"
+credentials_path = "D:/Coding/IntroML/coe379-ml-project-81b7de97df4a.json"
+# credentials_path = "C:/Users/arish/Coding/MLClass/coe379-ml-project-55cd4cde117a.json"
 credentials = service_account.Credentials.from_service_account_file(credentials_path)
 tokenizer = AutoTokenizer.from_pretrained("ProsusAI/finbert")
 model_finbert = AutoModelForSequenceClassification.from_pretrained("ProsusAI/finbert")
@@ -127,10 +127,6 @@ def fetch_stock_data(ticker, start_date, end_date):
     stock_data["SMA_20"] = TA.SMA(stock_data, 20)
     # stock_data["RSI"] = TA.RSI(stock_data)
     stock_data["RSI"] = calculate_rsi(stock_data["Close"])
-    # stock_data["SMA_5"] = stock_data["Close"].rolling(window=5).mean()
-    # stock_data["SMA_20"] = stock_data["Close"].rolling(window=20).mean()
-    # stock_data["RSI"] = calculate_rsi(stock_data["Close"])
-    # stock_data["Volatility"] = stock_data["Close"].rolling(window=5).std()
 
     return stock_data
 
@@ -195,82 +191,82 @@ def prepare_features(stock_df, sentiment_df, window=2):
 def evaluate_models(X_train, X_test, y_train, y_test):
     """Evaluate multiple models and return their performance metrics."""
     # Define models with preset hyperparameters - short term (2 week)
-    # models = {
-    #     "LinearRegression": {
-    #         "model": LinearRegression(),
-    #         "description": "Basic linear regression model",
-    #     },
-    #     "Ridge": {
-    #         "model": Ridge(alpha=0.8, solver="auto"),
-    #         "description": "Standard regularized linear regression",
-    #     },
-    #     "Lasso": {
-    #         "model": Lasso(alpha=0.8, selection="cyclic"),
-    #         "description": "Linear regression with L1 regularization",
-    #     },
-    #     "ElasticNet": {
-    #         "model": ElasticNet(alpha=0.001, l1_ratio=0.5, selection="cyclic"),
-    #         "description": "Combination of L1 and L2 regularization",
-    #     },
-    #     "RandomForest": {
-    #         "model": RandomForestRegressor(
-    #             n_estimators=50, max_depth=10, min_samples_split=5, random_state=42
-    #         ),
-    #         "description": "Ensemble method with decision trees",
-    #     },
-    #     "XGBoost": {
-    #         "model": XGBRegressor(
-    #             n_estimators=50, learning_rate=0.1, max_depth=5, random_state=42
-    #         ),
-    #         "description": "Gradient boosting algorithm",
-    #     },
-    # }
-
-    # Define models with preset hyperparameters - long term (1 month)
     models = {
         "LinearRegression": {
             "model": LinearRegression(),
             "description": "Basic linear regression model",
         },
         "Ridge": {
-            "model": Ridge(
-                alpha=1.0, solver="auto"
-            ),  # Slightly increased regularization
+            "model": Ridge(alpha=0.8, solver="auto"),
             "description": "Standard regularized linear regression",
         },
         "Lasso": {
-            "model": Lasso(
-                alpha=0.5, selection="cyclic"
-            ),  # Lowered alpha for less aggressive regularization
+            "model": Lasso(alpha=0.8, selection="cyclic"),
             "description": "Linear regression with L1 regularization",
         },
         "ElasticNet": {
-            "model": ElasticNet(
-                alpha=0.01, l1_ratio=0.7, selection="cyclic"
-            ),  # More focus on L1 regularization
+            "model": ElasticNet(alpha=0.001, l1_ratio=0.5, selection="cyclic"),
             "description": "Combination of L1 and L2 regularization",
         },
         "RandomForest": {
             "model": RandomForestRegressor(
-                n_estimators=200,  # Increased number of trees for better stability
-                max_depth=15,  # Allow deeper trees for more complex patterns
-                min_samples_split=4,  # Slightly lower split requirement
-                random_state=42,
+                n_estimators=50, max_depth=10, min_samples_split=5, random_state=42
             ),
             "description": "Ensemble method with decision trees",
         },
         "XGBoost": {
             "model": XGBRegressor(
-                n_estimators=300,  # More boosting rounds
-                learning_rate=0.05,  # Lower learning rate for better convergence
-                max_depth=7,  # Slightly deeper trees
-                colsample_bytree=0.8,  # Random feature subsampling for regularization
-                subsample=0.8,  # Row subsampling to reduce overfitting
-                random_state=42,
+                n_estimators=50, learning_rate=0.1, max_depth=5, random_state=42
             ),
             "description": "Gradient boosting algorithm",
         },
     }
+
+    # Define models with preset hyperparameters - long term (1 month)
+    # models = {
+    #     "LinearRegression": {
+    #         "model": LinearRegression(),
+    #         "description": "Basic linear regression model",
+    #     },
+    #     "Ridge": {
+    #         "model": Ridge(
+    #             alpha=1.0, solver="auto"
+    #         ),  # Slightly increased regularization
+    #         "description": "Standard regularized linear regression",
+    #     },
+    #     "Lasso": {
+    #         "model": Lasso(
+    #             alpha=0.5, selection="cyclic"
+    #         ),  # Lowered alpha for less aggressive regularization
+    #         "description": "Linear regression with L1 regularization",
+    #     },
+    #     "ElasticNet": {
+    #         "model": ElasticNet(
+    #             alpha=0.01, l1_ratio=0.7, selection="cyclic"
+    #         ),  # More focus on L1 regularization
+    #         "description": "Combination of L1 and L2 regularization",
+    #     },
+    #     "RandomForest": {
+    #         "model": RandomForestRegressor(
+    #             n_estimators=200,  # Increased number of trees for better stability
+    #             max_depth=15,  # Allow deeper trees for more complex patterns
+    #             min_samples_split=4,  # Slightly lower split requirement
+    #             random_state=42,
+    #         ),
+    #         "description": "Ensemble method with decision trees",
+    #     },
+    #     "XGBoost": {
+    #         "model": XGBRegressor(
+    #             n_estimators=300,  # More boosting rounds
+    #             learning_rate=0.05,  # Lower learning rate for better convergence
+    #             max_depth=7,  # Slightly deeper trees
+    #             colsample_bytree=0.8,  # Random feature subsampling for regularization
+    #             subsample=0.8,  # Row subsampling to reduce overfitting
+    #             random_state=42,
+    #         ),
+    #         "description": "Gradient boosting algorithm",
+    #     },
+    # }
 
     results = {}
     scaler = StandardScaler()
@@ -488,7 +484,7 @@ def main():
     # Updated date range
     target_date = "2024-11-22"  # Last trading day we want to predict
     end_date = "2024-11-21"  # Day before target date
-    start_date = "2024-10-18"  # Extended start date
+    start_date = "2024-11-11"  # Extended start date
 
     try:
         # Fetch data with extended date range
@@ -610,7 +606,7 @@ def main():
 
         # Update layout with dual y-axis
         fig.update_layout(
-            title=f"{company} Stock Price Prediction vs Actual for {target_date} (2 weeks) | Prediction Error: {prediction_error:.2f}%",
+            title=f"{company} Stock Price Prediction vs Actual for {target_date}",
             xaxis_title="Date",
             yaxis_title="Price ($)",
             yaxis2=dict(
